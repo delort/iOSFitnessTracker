@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		400F8F291A032B0400013514 /* MetaWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400F8F281A032B0400013514 /* MetaWear.framework */; };
+		405F000319F5FD9400FAEAFC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 405F000219F5FD9400FAEAFC /* MBProgressHUD.m */; };
+		405F000A19F5FDCB00FAEAFC /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 405F000519F5FDCB00FAEAFC /* JBBarChartView.m */; };
+		405F000B19F5FDCB00FAEAFC /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 405F000719F5FDCB00FAEAFC /* JBChartView.m */; };
+		405F000C19F5FDCB00FAEAFC /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 405F000919F5FDCB00FAEAFC /* JBLineChartView.m */; };
+		406CCC0A19EF73E5007C0217 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC0919EF73E5007C0217 /* main.m */; };
+		406CCC0D19EF73E5007C0217 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC0C19EF73E5007C0217 /* AppDelegate.m */; };
+		406CCC1319EF73E5007C0217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406CCC1119EF73E5007C0217 /* Main.storyboard */; };
+		406CCC1519EF73E5007C0217 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 406CCC1419EF73E5007C0217 /* Images.xcassets */; };
+		406CCC2419EF73E5007C0217 /* ActivityTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC2319EF73E5007C0217 /* ActivityTracker.m */; };
+		406CCC3E19F05A05007C0217 /* ScanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC3D19F05A05007C0217 /* ScanTableViewController.m */; };
+		406CCC4C19F09DB6007C0217 /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC4B19F09DB6007C0217 /* LogViewController.m */; };
+		D06E99651A0B35D3002B3672 /* JBChartInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E99601A0B35D3002B3672 /* JBChartInformationView.m */; };
+		D06E99671A0B35D3002B3672 /* JBChartTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E99641A0B35D3002B3672 /* JBChartTooltipView.m */; };
+		D06E996A1A0B39B3002B3672 /* JBBarChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E99691A0B39B3002B3672 /* JBBarChartFooterView.m */; };
+		D06E99701A0B3A47002B3672 /* JBChartHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E996F1A0B3A47002B3672 /* JBChartHeaderView.m */; };
+		D06E99741A0B52E4002B3672 /* JBBaseChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E99731A0B52E4002B3672 /* JBBaseChartViewController.m */; };
+		D06E997A1A0B53E7002B3672 /* JBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E99791A0B53E7002B3672 /* JBBaseViewController.m */; };
+		D06E997D1A0B597E002B3672 /* icon-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E997B1A0B597E002B3672 /* icon-arrow.png */; };
+		D06E997E1A0B597E002B3672 /* icon-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E997C1A0B597E002B3672 /* icon-arrow@2x.png */; };
+		D06E99811A0B5A79002B3672 /* JBChartTooltipTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E99801A0B5A79002B3672 /* JBChartTooltipTipView.m */; };
+		D079C4231A159843001D6DDE /* logger-background.png in Resources */ = {isa = PBXBuildFile; fileRef = D079C4221A159843001D6DDE /* logger-background.png */; };
+		D079C4281A159A79001D6DDE /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D079C4271A159A79001D6DDE /* StartViewController.m */; };
+		D07BA17C1A0AD89F00C6CB14 /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D07BA17B1A0AD89F00C6CB14 /* BaseNavViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		406CCC1E19EF73E5007C0217 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 406CCBFC19EF73E5007C0217 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 406CCC0319EF73E5007C0217;
+			remoteInfo = ActivityTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		400F8F281A032B0400013514 /* MetaWear.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MetaWear.framework; sourceTree = "<group>"; };
+		405F000119F5FD9400FAEAFC /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
+		405F000219F5FD9400FAEAFC /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
+		405F000419F5FDCB00FAEAFC /* JBBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBBarChartView.h; path = JBCharView/JBBarChartView.h; sourceTree = SOURCE_ROOT; };
+		405F000519F5FDCB00FAEAFC /* JBBarChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBBarChartView.m; path = JBCharView/JBBarChartView.m; sourceTree = SOURCE_ROOT; };
+		405F000619F5FDCB00FAEAFC /* JBChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartView.h; path = JBCharView/JBChartView.h; sourceTree = SOURCE_ROOT; };
+		405F000719F5FDCB00FAEAFC /* JBChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartView.m; path = JBCharView/JBChartView.m; sourceTree = SOURCE_ROOT; };
+		405F000819F5FDCB00FAEAFC /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBLineChartView.h; path = JBCharView/JBLineChartView.h; sourceTree = SOURCE_ROOT; };
+		405F000919F5FDCB00FAEAFC /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBLineChartView.m; path = JBCharView/JBLineChartView.m; sourceTree = SOURCE_ROOT; };
+		406CCC0419EF73E5007C0217 /* ActivityTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		406CCC0819EF73E5007C0217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		406CCC0919EF73E5007C0217 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		406CCC0B19EF73E5007C0217 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		406CCC0C19EF73E5007C0217 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		406CCC1219EF73E5007C0217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		406CCC1419EF73E5007C0217 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		406CCC1D19EF73E5007C0217 /* ActivityTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActivityTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		406CCC2219EF73E5007C0217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		406CCC2319EF73E5007C0217 /* ActivityTracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityTracker.m; sourceTree = "<group>"; };
+		406CCC3C19F05A05007C0217 /* ScanTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanTableViewController.h; sourceTree = "<group>"; };
+		406CCC3D19F05A05007C0217 /* ScanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanTableViewController.m; sourceTree = "<group>"; };
+		406CCC4A19F09DB6007C0217 /* LogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogViewController.h; sourceTree = "<group>"; };
+		406CCC4B19F09DB6007C0217 /* LogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogViewController.m; sourceTree = "<group>"; };
+		D06E994A1A0AEE3C002B3672 /* ColorConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorConstants.h; sourceTree = "<group>"; };
+		D06E994B1A0AF008002B3672 /* ActivityTrackerPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityTrackerPrefixHeader.pch; sourceTree = "<group>"; };
+		D06E994C1A0AF65F002B3672 /* FontConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontConstants.h; sourceTree = "<group>"; };
+		D06E995F1A0B35D3002B3672 /* JBChartInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartInformationView.h; path = JBCharView/JBChartInformationView.h; sourceTree = SOURCE_ROOT; };
+		D06E99601A0B35D3002B3672 /* JBChartInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartInformationView.m; path = JBCharView/JBChartInformationView.m; sourceTree = SOURCE_ROOT; };
+		D06E99631A0B35D3002B3672 /* JBChartTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartTooltipView.h; path = JBCharView/JBChartTooltipView.h; sourceTree = SOURCE_ROOT; };
+		D06E99641A0B35D3002B3672 /* JBChartTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartTooltipView.m; path = JBCharView/JBChartTooltipView.m; sourceTree = SOURCE_ROOT; };
+		D06E99681A0B39B3002B3672 /* JBBarChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBBarChartFooterView.h; path = JBCharView/JBBarChartFooterView.h; sourceTree = SOURCE_ROOT; };
+		D06E99691A0B39B3002B3672 /* JBBarChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBBarChartFooterView.m; path = JBCharView/JBBarChartFooterView.m; sourceTree = SOURCE_ROOT; };
+		D06E996E1A0B3A47002B3672 /* JBChartHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartHeaderView.h; path = JBCharView/JBChartHeaderView.h; sourceTree = SOURCE_ROOT; };
+		D06E996F1A0B3A47002B3672 /* JBChartHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartHeaderView.m; path = JBCharView/JBChartHeaderView.m; sourceTree = SOURCE_ROOT; };
+		D06E99721A0B52E4002B3672 /* JBBaseChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBBaseChartViewController.h; path = JBCharView/JBBaseChartViewController.h; sourceTree = SOURCE_ROOT; };
+		D06E99731A0B52E4002B3672 /* JBBaseChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBBaseChartViewController.m; path = JBCharView/JBBaseChartViewController.m; sourceTree = SOURCE_ROOT; };
+		D06E99781A0B53E7002B3672 /* JBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBBaseViewController.h; path = JBCharView/JBBaseViewController.h; sourceTree = SOURCE_ROOT; };
+		D06E99791A0B53E7002B3672 /* JBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBBaseViewController.m; path = JBCharView/JBBaseViewController.m; sourceTree = SOURCE_ROOT; };
+		D06E997B1A0B597E002B3672 /* icon-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow.png"; sourceTree = "<group>"; };
+		D06E997C1A0B597E002B3672 /* icon-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow@2x.png"; sourceTree = "<group>"; };
+		D06E997F1A0B5A79002B3672 /* JBChartTooltipTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartTooltipTipView.h; path = JBCharView/JBChartTooltipTipView.h; sourceTree = SOURCE_ROOT; };
+		D06E99801A0B5A79002B3672 /* JBChartTooltipTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartTooltipTipView.m; path = JBCharView/JBChartTooltipTipView.m; sourceTree = SOURCE_ROOT; };
+		D079C4221A159843001D6DDE /* logger-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logger-background.png"; sourceTree = "<group>"; };
+		D079C4261A159A79001D6DDE /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		D079C4271A159A79001D6DDE /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		D07BA17A1A0AD89F00C6CB14 /* BaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
+		D07BA17B1A0AD89F00C6CB14 /* BaseNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		406CCC0119EF73E5007C0217 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				400F8F291A032B0400013514 /* MetaWear.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		406CCC1A19EF73E5007C0217 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		406CCBFB19EF73E5007C0217 = {
+			isa = PBXGroup;
+			children = (
+				40F8002619F5B762000031CB /* MBProgressHUD */,
+				406CCC4D19F0AE55007C0217 /* JBChartView */,
+				406CCC0619EF73E5007C0217 /* ActivityTracker */,
+				406CCC2019EF73E5007C0217 /* ActivityTrackerTests */,
+				406CCC2D19EF73F6007C0217 /* Frameworks */,
+				406CCC0519EF73E5007C0217 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		406CCC0519EF73E5007C0217 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				406CCC0419EF73E5007C0217 /* ActivityTracker.app */,
+				406CCC1D19EF73E5007C0217 /* ActivityTrackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		406CCC0619EF73E5007C0217 /* ActivityTracker */ = {
+			isa = PBXGroup;
+			children = (
+				D06E994A1A0AEE3C002B3672 /* ColorConstants.h */,
+				D06E994C1A0AF65F002B3672 /* FontConstants.h */,
+				406CCC0B19EF73E5007C0217 /* AppDelegate.h */,
+				406CCC0C19EF73E5007C0217 /* AppDelegate.m */,
+				D07BA17A1A0AD89F00C6CB14 /* BaseNavViewController.h */,
+				D07BA17B1A0AD89F00C6CB14 /* BaseNavViewController.m */,
+				406CCC3C19F05A05007C0217 /* ScanTableViewController.h */,
+				406CCC3D19F05A05007C0217 /* ScanTableViewController.m */,
+				406CCC4A19F09DB6007C0217 /* LogViewController.h */,
+				406CCC4B19F09DB6007C0217 /* LogViewController.m */,
+				D079C4261A159A79001D6DDE /* StartViewController.h */,
+				D079C4271A159A79001D6DDE /* StartViewController.m */,
+				406CCC1119EF73E5007C0217 /* Main.storyboard */,
+				406CCC1419EF73E5007C0217 /* Images.xcassets */,
+				406CCC0719EF73E5007C0217 /* Supporting Files */,
+			);
+			path = ActivityTracker;
+			sourceTree = "<group>";
+		};
+		406CCC0719EF73E5007C0217 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D079C4221A159843001D6DDE /* logger-background.png */,
+				D06E997B1A0B597E002B3672 /* icon-arrow.png */,
+				D06E997C1A0B597E002B3672 /* icon-arrow@2x.png */,
+				406CCC0819EF73E5007C0217 /* Info.plist */,
+				406CCC0919EF73E5007C0217 /* main.m */,
+				D06E994B1A0AF008002B3672 /* ActivityTrackerPrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		406CCC2019EF73E5007C0217 /* ActivityTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				406CCC2319EF73E5007C0217 /* ActivityTracker.m */,
+				406CCC2119EF73E5007C0217 /* Supporting Files */,
+			);
+			path = ActivityTrackerTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		406CCC2119EF73E5007C0217 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				406CCC2219EF73E5007C0217 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		406CCC2D19EF73F6007C0217 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				400F8F281A032B0400013514 /* MetaWear.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		406CCC4D19F0AE55007C0217 /* JBChartView */ = {
+			isa = PBXGroup;
+			children = (
+				D06E996E1A0B3A47002B3672 /* JBChartHeaderView.h */,
+				D06E996F1A0B3A47002B3672 /* JBChartHeaderView.m */,
+				D06E995F1A0B35D3002B3672 /* JBChartInformationView.h */,
+				D06E99601A0B35D3002B3672 /* JBChartInformationView.m */,
+				D06E997F1A0B5A79002B3672 /* JBChartTooltipTipView.h */,
+				D06E99801A0B5A79002B3672 /* JBChartTooltipTipView.m */,
+				D06E99631A0B35D3002B3672 /* JBChartTooltipView.h */,
+				D06E99641A0B35D3002B3672 /* JBChartTooltipView.m */,
+				D06E99781A0B53E7002B3672 /* JBBaseViewController.h */,
+				D06E99791A0B53E7002B3672 /* JBBaseViewController.m */,
+				D06E99721A0B52E4002B3672 /* JBBaseChartViewController.h */,
+				D06E99731A0B52E4002B3672 /* JBBaseChartViewController.m */,
+				405F000419F5FDCB00FAEAFC /* JBBarChartView.h */,
+				405F000519F5FDCB00FAEAFC /* JBBarChartView.m */,
+				D06E99681A0B39B3002B3672 /* JBBarChartFooterView.h */,
+				D06E99691A0B39B3002B3672 /* JBBarChartFooterView.m */,
+				405F000619F5FDCB00FAEAFC /* JBChartView.h */,
+				405F000719F5FDCB00FAEAFC /* JBChartView.m */,
+				405F000819F5FDCB00FAEAFC /* JBLineChartView.h */,
+				405F000919F5FDCB00FAEAFC /* JBLineChartView.m */,
+			);
+			name = JBChartView;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		40F8002619F5B762000031CB /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				405F000119F5FD9400FAEAFC /* MBProgressHUD.h */,
+				405F000219F5FD9400FAEAFC /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		406CCC0319EF73E5007C0217 /* ActivityTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 406CCC2719EF73E5007C0217 /* Build configuration list for PBXNativeTarget "ActivityTracker" */;
+			buildPhases = (
+				406CCC0019EF73E5007C0217 /* Sources */,
+				406CCC0119EF73E5007C0217 /* Frameworks */,
+				406CCC0219EF73E5007C0217 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ActivityTracker;
+			productName = ActivityTracker;
+			productReference = 406CCC0419EF73E5007C0217 /* ActivityTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		406CCC1C19EF73E5007C0217 /* ActivityTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 406CCC2A19EF73E5007C0217 /* Build configuration list for PBXNativeTarget "ActivityTrackerTests" */;
+			buildPhases = (
+				406CCC1919EF73E5007C0217 /* Sources */,
+				406CCC1A19EF73E5007C0217 /* Frameworks */,
+				406CCC1B19EF73E5007C0217 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				406CCC1F19EF73E5007C0217 /* PBXTargetDependency */,
+			);
+			name = ActivityTrackerTests;
+			productName = ActivityTrackerTests;
+			productReference = 406CCC1D19EF73E5007C0217 /* ActivityTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		406CCBFC19EF73E5007C0217 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "MbientLab Inc.";
+				TargetAttributes = {
+					406CCC0319EF73E5007C0217 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					406CCC1C19EF73E5007C0217 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 406CCBFF19EF73E5007C0217 /* Build configuration list for PBXProject "ActivityTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 406CCBFB19EF73E5007C0217;
+			productRefGroup = 406CCC0519EF73E5007C0217 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				406CCC0319EF73E5007C0217 /* ActivityTracker */,
+				406CCC1C19EF73E5007C0217 /* ActivityTrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		406CCC0219EF73E5007C0217 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D079C4231A159843001D6DDE /* logger-background.png in Resources */,
+				406CCC1319EF73E5007C0217 /* Main.storyboard in Resources */,
+				D06E997D1A0B597E002B3672 /* icon-arrow.png in Resources */,
+				406CCC1519EF73E5007C0217 /* Images.xcassets in Resources */,
+				D06E997E1A0B597E002B3672 /* icon-arrow@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		406CCC1B19EF73E5007C0217 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		406CCC0019EF73E5007C0217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				405F000319F5FD9400FAEAFC /* MBProgressHUD.m in Sources */,
+				405F000B19F5FDCB00FAEAFC /* JBChartView.m in Sources */,
+				D07BA17C1A0AD89F00C6CB14 /* BaseNavViewController.m in Sources */,
+				406CCC3E19F05A05007C0217 /* ScanTableViewController.m in Sources */,
+				406CCC0D19EF73E5007C0217 /* AppDelegate.m in Sources */,
+				405F000C19F5FDCB00FAEAFC /* JBLineChartView.m in Sources */,
+				D06E99701A0B3A47002B3672 /* JBChartHeaderView.m in Sources */,
+				D06E99671A0B35D3002B3672 /* JBChartTooltipView.m in Sources */,
+				D06E99741A0B52E4002B3672 /* JBBaseChartViewController.m in Sources */,
+				D06E99651A0B35D3002B3672 /* JBChartInformationView.m in Sources */,
+				405F000A19F5FDCB00FAEAFC /* JBBarChartView.m in Sources */,
+				406CCC0A19EF73E5007C0217 /* main.m in Sources */,
+				D06E996A1A0B39B3002B3672 /* JBBarChartFooterView.m in Sources */,
+				406CCC4C19F09DB6007C0217 /* LogViewController.m in Sources */,
+				D079C4281A159A79001D6DDE /* StartViewController.m in Sources */,
+				D06E997A1A0B53E7002B3672 /* JBBaseViewController.m in Sources */,
+				D06E99811A0B5A79002B3672 /* JBChartTooltipTipView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		406CCC1919EF73E5007C0217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				406CCC2419EF73E5007C0217 /* ActivityTracker.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		406CCC1F19EF73E5007C0217 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 406CCC0319EF73E5007C0217 /* ActivityTracker */;
+			targetProxy = 406CCC1E19EF73E5007C0217 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		406CCC1119EF73E5007C0217 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				406CCC1219EF73E5007C0217 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		406CCC2519EF73E5007C0217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		406CCC2619EF73E5007C0217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		406CCC2819EF73E5007C0217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = ActivityTracker/ActivityTrackerPrefixHeader.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/ActivityTracker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = ActivityTracker;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Debug;
+		};
+		406CCC2919EF73E5007C0217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = ActivityTracker/ActivityTrackerPrefixHeader.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/ActivityTracker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = ActivityTracker;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Release;
+		};
+		406CCC2B19EF73E5007C0217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ActivityTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = ActivityTrackerTests;
+			};
+			name = Debug;
+		};
+		406CCC2C19EF73E5007C0217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ActivityTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = ActivityTrackerTests;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		406CCBFF19EF73E5007C0217 /* Build configuration list for PBXProject "ActivityTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				406CCC2519EF73E5007C0217 /* Debug */,
+				406CCC2619EF73E5007C0217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		406CCC2719EF73E5007C0217 /* Build configuration list for PBXNativeTarget "ActivityTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				406CCC2819EF73E5007C0217 /* Debug */,
+				406CCC2919EF73E5007C0217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		406CCC2A19EF73E5007C0217 /* Build configuration list for PBXNativeTarget "ActivityTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				406CCC2B19EF73E5007C0217 /* Debug */,
+				406CCC2C19EF73E5007C0217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 406CCBFC19EF73E5007C0217 /* Project object */;
+}
