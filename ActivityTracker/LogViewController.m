@@ -48,7 +48,7 @@ NSInteger const BarChartViewControllerMaxBarHeight = 100;
 NSInteger const BarChartViewControllerMinBarHeight = 0;
 
 // Rough estimate of how many raw accelerometer counts are in a step
-NSInteger const ActivityPerStep = 1000;
+NSInteger const ActivityPerStep = 2000;
 // Estimate of steps per mile assuming casual walking speed @150 pounds
 NSInteger const StepsPerMile = 2000;
 // Estimate of calories burned per step assuming casual walking speed @150 pounds
@@ -226,7 +226,7 @@ CGFloat const CaloriesPerStep = 0.045;
     NSMutableArray *mutableTimeData = [NSMutableArray array];
     for (int i=0; i<BarChartViewControllerNumBars+1; i++)
     {
-        [mutableChartData addObject:[NSNumber numberWithFloat:MAX((BarChartViewControllerMinBarHeight), arc4random() % (BarChartViewControllerMaxBarHeight))*500]];
+        [mutableChartData addObject:[NSNumber numberWithFloat:MAX((BarChartViewControllerMinBarHeight), arc4random() % (BarChartViewControllerMaxBarHeight))*1000]];
         [mutableTimeData addObject:[NSNumber numberWithInt:0]];
     }
     _chartData = mutableChartData;
