@@ -26,6 +26,7 @@
 		40D29D631A29732C0048729C /* JBChartTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D571A29732C0048729C /* JBChartTooltipView.m */; };
 		40D29D641A29732C0048729C /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D591A29732C0048729C /* JBChartView.m */; };
 		40D29D651A29732C0048729C /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D5B1A29732C0048729C /* JBLineChartView.m */; };
+		40D29D681A297A040048729C /* LogEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D671A297A040048729C /* LogEntry.m */; };
 		D06E997D1A0B597E002B3672 /* icon-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E997B1A0B597E002B3672 /* icon-arrow.png */; };
 		D06E997E1A0B597E002B3672 /* icon-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E997C1A0B597E002B3672 /* icon-arrow@2x.png */; };
 		D079C4231A159843001D6DDE /* logger-background.png in Resources */ = {isa = PBXBuildFile; fileRef = D079C4221A159843001D6DDE /* logger-background.png */; };
@@ -81,6 +82,8 @@
 		40D29D591A29732C0048729C /* JBChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartView.m; path = JBChartView/JBChartView.m; sourceTree = SOURCE_ROOT; };
 		40D29D5A1A29732C0048729C /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBLineChartView.h; path = JBChartView/JBLineChartView.h; sourceTree = SOURCE_ROOT; };
 		40D29D5B1A29732C0048729C /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBLineChartView.m; path = JBChartView/JBLineChartView.m; sourceTree = SOURCE_ROOT; };
+		40D29D661A297A040048729C /* LogEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogEntry.h; sourceTree = "<group>"; };
+		40D29D671A297A040048729C /* LogEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogEntry.m; sourceTree = "<group>"; };
 		D06E994A1A0AEE3C002B3672 /* ColorConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorConstants.h; sourceTree = "<group>"; };
 		D06E994B1A0AF008002B3672 /* ActivityTrackerPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityTrackerPrefixHeader.pch; sourceTree = "<group>"; };
 		D06E994C1A0AF65F002B3672 /* FontConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontConstants.h; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 			children = (
 				D06E994A1A0AEE3C002B3672 /* ColorConstants.h */,
 				D06E994C1A0AF65F002B3672 /* FontConstants.h */,
+				40D29D661A297A040048729C /* LogEntry.h */,
+				40D29D671A297A040048729C /* LogEntry.m */,
 				406CCC0B19EF73E5007C0217 /* AppDelegate.h */,
 				406CCC0C19EF73E5007C0217 /* AppDelegate.m */,
 				D07BA17A1A0AD89F00C6CB14 /* BaseNavViewController.h */,
@@ -346,6 +351,7 @@
 				40D29D631A29732C0048729C /* JBChartTooltipView.m in Sources */,
 				40D29D611A29732C0048729C /* JBChartInformationView.m in Sources */,
 				40D29D5D1A29732C0048729C /* JBBarChartView.m in Sources */,
+				40D29D681A297A040048729C /* LogEntry.m in Sources */,
 				40D29D5C1A29732C0048729C /* JBBarChartFooterView.m in Sources */,
 				D079C4281A159A79001D6DDE /* StartViewController.m in Sources */,
 			);

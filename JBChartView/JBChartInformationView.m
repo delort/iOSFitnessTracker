@@ -59,34 +59,46 @@ static UIColor *ChartInformationViewShadowColor = nil;
 	}
 }
 
+- (void)setupWithFrame:(CGRect)frame
+{
+    self.clipsToBounds = YES;
+    
+    self.backgroundColor = [UIColor clearColor];
+    
+    _titleLabel = [[UILabel alloc] init];
+    _titleLabel.font = FontInformationTitle;
+    _titleLabel.numberOfLines = 1;
+    _titleLabel.adjustsFontSizeToFitWidth = YES;
+    _titleLabel.backgroundColor = [UIColor clearColor];
+    _titleLabel.textColor = ChartViewTitleColor;
+    _titleLabel.shadowColor = ChartViewShadowColor;
+    _titleLabel.shadowOffset = CGSizeMake(0, 1);
+    _titleLabel.textAlignment = NSTextAlignmentLeft;
+    [self addSubview:_titleLabel];
+    
+    _separatorView = [[UIView alloc] init];
+    _separatorView.backgroundColor = ChartViewSeparatorColor;
+    [self addSubview:_separatorView];
+    
+    _valueView = [[JBChartValueView alloc] initWithFrame:[self valueViewRect]];
+    [self addSubview:_valueView];
+    
+    [self setHidden:YES animated:NO];
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self)
     {
-        self.clipsToBounds = YES;
-
-        _titleLabel = [[UILabel alloc] init];
-        _titleLabel.font = FontInformationTitle;
-        _titleLabel.numberOfLines = 1;
-        _titleLabel.adjustsFontSizeToFitWidth = YES;
-        _titleLabel.backgroundColor = [UIColor clearColor];
-        _titleLabel.textColor = ChartViewTitleColor;
-        _titleLabel.shadowColor = ChartViewShadowColor;
-        _titleLabel.shadowOffset = CGSizeMake(0, 1);
-        _titleLabel.textAlignment = NSTextAlignmentLeft;
-        [self addSubview:_titleLabel];
-
-        _separatorView = [[UIView alloc] init];
-        _separatorView.backgroundColor = ChartViewSeparatorColor;
-        [self addSubview:_separatorView];
-
-        _valueView = [[JBChartValueView alloc] initWithFrame:[self valueViewRect]];
-        [self addSubview:_valueView];
-        
-        [self setHidden:YES animated:NO];
+        [self setupWithFrame:frame];
     }
     return self;
+}
+
+- (void)awakeFromNib
+{
+    [self setupWithFrame:self.frame];
 }
 
 #pragma mark - Position
@@ -265,7 +277,6 @@ static UIColor *ChartInformationViewShadowColor = nil;
     valueLabelSize = [self.valueLabel.text sizeWithAttributes:@{NSFontAttributeName:self.valueLabel.font}];
 
     CGSize unitLabelSize = CGSizeZero;
-    if ([self.unitLabel.text respondsToSelector:@selector(sizeWithAttributes:)])
     unitLabelSize = [self.unitLabel.text sizeWithAttributes:@{NSFontAttributeName:self.unitLabel.font}];
     
     CGFloat xOffset = ceil((self.bounds.size.width - (valueLabelSize.width + unitLabelSize.width)) * 0.5);
