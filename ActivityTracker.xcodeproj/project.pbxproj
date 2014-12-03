@@ -29,7 +29,6 @@
 		40D29D681A297A040048729C /* LogEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D671A297A040048729C /* LogEntry.m */; };
 		D06E997D1A0B597E002B3672 /* icon-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E997B1A0B597E002B3672 /* icon-arrow.png */; };
 		D06E997E1A0B597E002B3672 /* icon-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E997C1A0B597E002B3672 /* icon-arrow@2x.png */; };
-		D079C4231A159843001D6DDE /* logger-background.png in Resources */ = {isa = PBXBuildFile; fileRef = D079C4221A159843001D6DDE /* logger-background.png */; };
 		D079C4281A159A79001D6DDE /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D079C4271A159A79001D6DDE /* StartViewController.m */; };
 		D07BA17C1A0AD89F00C6CB14 /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D07BA17B1A0AD89F00C6CB14 /* BaseNavViewController.m */; };
 /* End PBXBuildFile section */
@@ -89,7 +88,6 @@
 		D06E994C1A0AF65F002B3672 /* FontConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontConstants.h; sourceTree = "<group>"; };
 		D06E997B1A0B597E002B3672 /* icon-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow.png"; sourceTree = "<group>"; };
 		D06E997C1A0B597E002B3672 /* icon-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow@2x.png"; sourceTree = "<group>"; };
-		D079C4221A159843001D6DDE /* logger-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logger-background.png"; sourceTree = "<group>"; };
 		D079C4261A159A79001D6DDE /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		D079C4271A159A79001D6DDE /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		D07BA17A1A0AD89F00C6CB14 /* BaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 		406CCC0719EF73E5007C0217 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D079C4221A159843001D6DDE /* logger-background.png */,
 				D06E997B1A0B597E002B3672 /* icon-arrow.png */,
 				D06E997C1A0B597E002B3672 /* icon-arrow@2x.png */,
 				406CCC0819EF73E5007C0217 /* Info.plist */,
@@ -314,7 +311,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D079C4231A159843001D6DDE /* logger-background.png in Resources */,
 				406CCC1319EF73E5007C0217 /* Main.storyboard in Resources */,
 				D06E997D1A0B597E002B3672 /* icon-arrow.png in Resources */,
 				406CCC1519EF73E5007C0217 /* Images.xcassets in Resources */,
