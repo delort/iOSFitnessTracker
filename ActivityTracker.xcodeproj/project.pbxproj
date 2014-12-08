@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		400F8F291A032B0400013514 /* MetaWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400F8F281A032B0400013514 /* MetaWear.framework */; };
 		405F000319F5FD9400FAEAFC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 405F000219F5FD9400FAEAFC /* MBProgressHUD.m */; };
 		406CCC0A19EF73E5007C0217 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC0919EF73E5007C0217 /* main.m */; };
 		406CCC0D19EF73E5007C0217 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC0C19EF73E5007C0217 /* AppDelegate.m */; };
@@ -16,6 +15,7 @@
 		406CCC2419EF73E5007C0217 /* ActivityTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC2319EF73E5007C0217 /* ActivityTracker.m */; };
 		406CCC3E19F05A05007C0217 /* ScanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC3D19F05A05007C0217 /* ScanTableViewController.m */; };
 		406CCC4C19F09DB6007C0217 /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC4B19F09DB6007C0217 /* LogViewController.m */; };
+		4096E00B1A318AB10018A01F /* MetaWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4096E00A1A318AB10018A01F /* MetaWear.framework */; };
 		40D29D5C1A29732C0048729C /* JBBarChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D491A29732C0048729C /* JBBarChartFooterView.m */; };
 		40D29D5D1A29732C0048729C /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D4B1A29732C0048729C /* JBBarChartView.m */; };
 		40D29D5E1A29732C0048729C /* JBBaseChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D4D1A29732C0048729C /* JBBaseChartViewController.m */; };
@@ -44,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		400F8F281A032B0400013514 /* MetaWear.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MetaWear.framework; sourceTree = "<group>"; };
 		405F000119F5FD9400FAEAFC /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
 		405F000219F5FD9400FAEAFC /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
 		406CCC0419EF73E5007C0217 /* ActivityTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +60,7 @@
 		406CCC3D19F05A05007C0217 /* ScanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanTableViewController.m; sourceTree = "<group>"; };
 		406CCC4A19F09DB6007C0217 /* LogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogViewController.h; sourceTree = "<group>"; };
 		406CCC4B19F09DB6007C0217 /* LogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogViewController.m; sourceTree = "<group>"; };
+		4096E00A1A318AB10018A01F /* MetaWear.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MetaWear.framework; sourceTree = "<group>"; };
 		40D29D481A29732C0048729C /* JBBarChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBBarChartFooterView.h; path = JBChartView/JBBarChartFooterView.h; sourceTree = SOURCE_ROOT; };
 		40D29D491A29732C0048729C /* JBBarChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBBarChartFooterView.m; path = JBChartView/JBBarChartFooterView.m; sourceTree = SOURCE_ROOT; };
 		40D29D4A1A29732C0048729C /* JBBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBBarChartView.h; path = JBChartView/JBBarChartView.h; sourceTree = SOURCE_ROOT; };
@@ -99,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				400F8F291A032B0400013514 /* MetaWear.framework in Frameworks */,
+				4096E00B1A318AB10018A01F /* MetaWear.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +190,7 @@
 		406CCC2D19EF73F6007C0217 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				400F8F281A032B0400013514 /* MetaWear.framework */,
+				4096E00A1A318AB10018A01F /* MetaWear.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
