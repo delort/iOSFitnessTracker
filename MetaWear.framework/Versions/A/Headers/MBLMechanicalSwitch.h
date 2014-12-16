@@ -37,13 +37,15 @@
 #import <MetaWear/MBLEvent.h>
 #import <MetaWear/MBLModule.h>
 
-@interface MBLMechanicalSwitch : MBLModule
+/**
+ Interface to on-board switch (pushbutton)
+ */
+@interface MBLMechanicalSwitch : MBLModule <NSCoding>
 
 /**
  Perform a single read of the switch state, then handler will be
  passed a YES for depressed and NO for released
- @param MBLSwitchStateHandler handler, will be called once switch value is read
- @returns none
+ @param handler Will be called once switch value is read
  */
 - (void)readSwitchStateWithHandler:(MBLSwitchStateHandler)handler;
 

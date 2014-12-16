@@ -175,6 +175,7 @@ static NSInteger const StepsPerMile = 2000;
             event = [[self.device.accelerometer.rmsDataReadyEvent summationOfEvent] periodicSampleOfEvent:60000 identifier:@"com.mbientlab.ActivityTrackerEvent"];
         }
         if (!event.isLogging) {
+            NSLog(@"Programming Device");
             self.device.accelerometer.fullScaleRange = MBLAccelerometerRange8G;
             self.device.accelerometer.filterCutoffFreq = 0;
             self.device.accelerometer.highPassFilter = YES;

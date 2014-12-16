@@ -38,7 +38,10 @@
 #import <MetaWear/MBLEvent.h>
 #import <MetaWear/MBLGPIOPin.h>
 
-@interface MBLGPIO : MBLModule
+/**
+ Interface to on-board pins
+ */
+@interface MBLGPIO : MBLModule <NSCoding>
 
 /**
  Array of MBLGPIOPin objects. The index corresponds to the pin number
@@ -48,48 +51,49 @@
  */
 @property (nonatomic, strong, readonly) NSArray *pins;
 
-
-
+///----------------------------------
+/// @name Deprecated Functions
+///----------------------------------
 
 /**
- * @deprecated use [pins[N] setToDigitalValue:] instead
- * @see MBLGPIOPin
+ @deprecated use [pins[N] setToDigitalValue:] instead
+ @see MBLGPIOPin
  */
 - (void)setPin:(uint8_t)pinNumber toDigitalValue:(BOOL)on DEPRECATED_MSG_ATTRIBUTE("Use [pins[N] setToDigitalValue:] instead");
 
 /**
- * @deprecated use [pins[N] configureType] instead
- * @see MBLGPIOPin
+ @deprecated use [pins[N] configureType] instead
+ @see MBLGPIOPin
  */
 - (void)configurePin:(uint8_t)pinNumber type:(MBLPinConfiguration)type DEPRECATED_MSG_ATTRIBUTE("Use [pins[N] configureType] instead");
 
 /**
- * @deprecated use [pins[N] readAnalogValueUsingMode:handler:] instead
- * @see MBLGPIOPin
+ @deprecated use [pins[N] readAnalogValueUsingMode:handler:] instead
+ @see MBLGPIOPin
  */
 - (void)readAnalogPin:(uint8_t)pinNumber mode:(MBLAnalogReadMode)mode handler:(MBLDecimalNumberHandler)handler DEPRECATED_MSG_ATTRIBUTE("Use [pins[N] readAnalogValueUsingMode:handler:] instead");
 
 /**
- * @deprecated use [pins[N] readDigitalValueWithHandler:] instead
- * @see MBLGPIOPin
+ @deprecated use [pins[N] readDigitalValueWithHandler:] instead
+ @see MBLGPIOPin
  */
 - (void)readDigitalPin:(uint8_t)pinNumber handler:(MBLBoolHandler)handler DEPRECATED_MSG_ATTRIBUTE("Use [pins[N] readDigitalValueWithHandler:] instead");
 
 /**
- * @deprecated use [pins[N] configureType] instead
- * @see MBLGPIOPin
+ @deprecated use [pins[N] configureType] instead
+ @see MBLGPIOPin
  */
 - (void)configurePin:(uint8_t)pinNumber withOptions:(uint8_t)type DEPRECATED_MSG_ATTRIBUTE("Use [pins[N] configureType] instead");
 
 /**
- * @deprecated use [pins[N] readDigitalValueWithHandler:] instead
- * @see MBLGPIOPin
+ @deprecated use [pins[N] readDigitalValueWithHandler:] instead
+ @see MBLGPIOPin
  */
 - (void)readDigitalPin:(uint8_t)pinNumber withHander:(MBLBoolHandler)handler DEPRECATED_MSG_ATTRIBUTE("Use [pins[N] readDigitalValueWithHandler:] instead");
 
 /**
- * @deprecated use [pins[N] readAnalogValueUsingMode:handler:] instead
- * @see MBLGPIOPin
+ @deprecated use [pins[N] readAnalogValueUsingMode:handler:] instead
+ @see MBLGPIOPin
  */
 - (void)readAnalogPin:(uint8_t)pinNumber usingOptions:(uint8_t)option withHandler:(MBLDecimalNumberHandler)handler DEPRECATED_MSG_ATTRIBUTE("Use [pins[N] readAnalogValueUsingMode:handler:] instead");
 
