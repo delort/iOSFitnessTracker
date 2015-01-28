@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		405F000319F5FD9400FAEAFC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 405F000219F5FD9400FAEAFC /* MBProgressHUD.m */; };
+		3264076B6EE211A5A3FFAD51 /* libPods-ActivityTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2BA6ED9B638D76BD1DFCF90 /* libPods-ActivityTracker.a */; };
 		406CCC0A19EF73E5007C0217 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC0919EF73E5007C0217 /* main.m */; };
 		406CCC0D19EF73E5007C0217 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC0C19EF73E5007C0217 /* AppDelegate.m */; };
 		406CCC1319EF73E5007C0217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406CCC1119EF73E5007C0217 /* Main.storyboard */; };
@@ -15,7 +15,6 @@
 		406CCC2419EF73E5007C0217 /* ActivityTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC2319EF73E5007C0217 /* ActivityTracker.m */; };
 		406CCC3E19F05A05007C0217 /* ScanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC3D19F05A05007C0217 /* ScanTableViewController.m */; };
 		406CCC4C19F09DB6007C0217 /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC4B19F09DB6007C0217 /* LogViewController.m */; };
-		408CA8CB1A4010D200AC578C /* MetaWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408CA8CA1A4010D200AC578C /* MetaWear.framework */; };
 		40D29D5C1A29732C0048729C /* JBBarChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D491A29732C0048729C /* JBBarChartFooterView.m */; };
 		40D29D5D1A29732C0048729C /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D4B1A29732C0048729C /* JBBarChartView.m */; };
 		40D29D5E1A29732C0048729C /* JBBaseChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D4D1A29732C0048729C /* JBBaseChartViewController.m */; };
@@ -44,8 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		405F000119F5FD9400FAEAFC /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
-		405F000219F5FD9400FAEAFC /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
+		05224752DBAF2C74551C78AA /* Pods-ActivityTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActivityTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-ActivityTracker/Pods-ActivityTracker.release.xcconfig"; sourceTree = "<group>"; };
 		406CCC0419EF73E5007C0217 /* ActivityTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		406CCC0819EF73E5007C0217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		406CCC0919EF73E5007C0217 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,7 +58,6 @@
 		406CCC3D19F05A05007C0217 /* ScanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanTableViewController.m; sourceTree = "<group>"; };
 		406CCC4A19F09DB6007C0217 /* LogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogViewController.h; sourceTree = "<group>"; };
 		406CCC4B19F09DB6007C0217 /* LogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogViewController.m; sourceTree = "<group>"; };
-		408CA8CA1A4010D200AC578C /* MetaWear.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MetaWear.framework; sourceTree = "<group>"; };
 		40D29D481A29732C0048729C /* JBBarChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBBarChartFooterView.h; path = JBChartView/JBBarChartFooterView.h; sourceTree = SOURCE_ROOT; };
 		40D29D491A29732C0048729C /* JBBarChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBBarChartFooterView.m; path = JBChartView/JBBarChartFooterView.m; sourceTree = SOURCE_ROOT; };
 		40D29D4A1A29732C0048729C /* JBBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBBarChartView.h; path = JBChartView/JBBarChartView.h; sourceTree = SOURCE_ROOT; };
@@ -92,6 +89,8 @@
 		D079C4271A159A79001D6DDE /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		D07BA17A1A0AD89F00C6CB14 /* BaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
 		D07BA17B1A0AD89F00C6CB14 /* BaseNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavViewController.m; sourceTree = "<group>"; };
+		D2BA6ED9B638D76BD1DFCF90 /* libPods-ActivityTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ActivityTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E61C1B767ADD0E3FC8543591 /* Pods-ActivityTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActivityTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ActivityTracker/Pods-ActivityTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				408CA8CB1A4010D200AC578C /* MetaWear.framework in Frameworks */,
+				3264076B6EE211A5A3FFAD51 /* libPods-ActivityTracker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,12 +115,12 @@
 		406CCBFB19EF73E5007C0217 = {
 			isa = PBXGroup;
 			children = (
-				40F8002619F5B762000031CB /* MBProgressHUD */,
 				406CCC4D19F0AE55007C0217 /* JBChartView */,
 				406CCC0619EF73E5007C0217 /* ActivityTracker */,
 				406CCC2019EF73E5007C0217 /* ActivityTrackerTests */,
 				406CCC2D19EF73F6007C0217 /* Frameworks */,
 				406CCC0519EF73E5007C0217 /* Products */,
+				504D110BBE1BA451203CC2DB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,7 +189,7 @@
 		406CCC2D19EF73F6007C0217 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				408CA8CA1A4010D200AC578C /* MetaWear.framework */,
+				D2BA6ED9B638D76BD1DFCF90 /* libPods-ActivityTracker.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -223,13 +222,13 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		40F8002619F5B762000031CB /* MBProgressHUD */ = {
+		504D110BBE1BA451203CC2DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				405F000119F5FD9400FAEAFC /* MBProgressHUD.h */,
-				405F000219F5FD9400FAEAFC /* MBProgressHUD.m */,
+				E61C1B767ADD0E3FC8543591 /* Pods-ActivityTracker.debug.xcconfig */,
+				05224752DBAF2C74551C78AA /* Pods-ActivityTracker.release.xcconfig */,
 			);
-			name = MBProgressHUD;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 406CCC2719EF73E5007C0217 /* Build configuration list for PBXNativeTarget "ActivityTracker" */;
 			buildPhases = (
+				FEF2C6FB0074EBE6A6121F97 /* Check Pods Manifest.lock */,
 				406CCC0019EF73E5007C0217 /* Sources */,
 				406CCC0119EF73E5007C0217 /* Frameworks */,
 				406CCC0219EF73E5007C0217 /* Resources */,
+				98E7BD4867C0A4DBB1DD74F4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -327,6 +328,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		98E7BD4867C0A4DBB1DD74F4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ActivityTracker/Pods-ActivityTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEF2C6FB0074EBE6A6121F97 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		406CCC0019EF73E5007C0217 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -334,7 +368,6 @@
 			files = (
 				40D29D601A29732C0048729C /* JBChartHeaderView.m in Sources */,
 				40D29D641A29732C0048729C /* JBChartView.m in Sources */,
-				405F000319F5FD9400FAEAFC /* MBProgressHUD.m in Sources */,
 				D07BA17C1A0AD89F00C6CB14 /* BaseNavViewController.m in Sources */,
 				40D29D621A29732C0048729C /* JBChartTooltipTipView.m in Sources */,
 				40D29D5E1A29732C0048729C /* JBBaseChartViewController.m in Sources */,
@@ -461,6 +494,7 @@
 		};
 		406CCC2819EF73E5007C0217 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E61C1B767ADD0E3FC8543591 /* Pods-ActivityTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -473,7 +507,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/ActivityTracker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = ActivityTracker;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -482,6 +516,7 @@
 		};
 		406CCC2919EF73E5007C0217 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05224752DBAF2C74551C78AA /* Pods-ActivityTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
