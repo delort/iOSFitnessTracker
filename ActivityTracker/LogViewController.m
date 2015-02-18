@@ -8,6 +8,7 @@
 
 #import "LogViewController.h"
 #import "LogEntry.h"
+#import "DeviceConfiguration.h"
 
 #import "JBLineChartView.h"
 #import "JBBarChartView.h"
@@ -107,13 +108,7 @@ static NSInteger const StepsPerMile = 2000;
         self.device = nil;
         
         [device connectWithHandler:^(NSError *error) {
-            // Clear the log currently on the device
-            MBLEvent *event = [self.device retrieveEventWithIdentifier:@"com.mbientlab.ActivityTrackerEvent"];
-            if (event && event.isLogging) {
-                [event downloadLogAndStopLogging:YES handler:^(NSArray *array, NSError *error) {
-                } progressHandler:nil];
-            };
-            [device resetDevice];
+            [device setConfiguration:nil handler:nil];
         }];
         [device forgetDevice];
         
@@ -169,24 +164,12 @@ static NSInteger const StepsPerMile = 2000;
             return;
         }
         
-        MBLEvent *event = [self.device retrieveEventWithIdentifier:@"com.mbientlab.ActivityTrackerEvent"];
-        if (!event) {
-            // Program to sum accelerometer RMS and log sample every 1 second
-            event = [[self.device.accelerometer.rmsDataReadyEvent summationOfEvent] periodicSampleOfEvent:60000 identifier:@"com.mbientlab.ActivityTrackerEvent"];
-        }
-        if (!event.isLogging) {
-            NSLog(@"Programming Device");
-            self.device.accelerometer.fullScaleRange = MBLAccelerometerRange8G;
-            self.device.accelerometer.filterCutoffFreq = 0;
-            self.device.accelerometer.highPassFilter = YES;
-            [event startLogging];
-        }
-        
         self.progressBar.hidden = NO;
         self.progressBar.progress = 0;
         self.statusLabel.text = @"Syncing...";
         
-        [event downloadLogAndStopLogging:NO handler:^(NSArray *array, NSError *error)  {
+        DeviceConfiguration *configuration = self.device.configuration;
+        [configuration.summedRMS downloadLogAndStopLogging:NO handler:^(NSArray *array, NSError *error)  {
             if (error) {
                 [[[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil] show];
             } else {
@@ -262,16 +245,13 @@ static NSInteger const StepsPerMile = 2000;
     }
 
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [self.device connectWithHandler:^(NSError *error) {
-        [self.device resetDevice];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.device connectWithHandler:^(NSError *error) {
+    MBLMetaWear *device = self.device;
+    [device connectWithHandler:^(NSError *error) {
+        [device setConfiguration:device.configuration handler:^(NSError *error) {
+            [device disconnectWithHandler:^(NSError *error) {
                 [hud hide:YES];
-                self.doingReset = YES;
-                // Reprogram and refresh the data.
-                [self refreshPressed:nil];
             }];
-        });
+        }];
     }];
 }
 

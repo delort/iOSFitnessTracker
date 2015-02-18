@@ -7,7 +7,7 @@
 //
 
 #import "ScanTableViewController.h"
-#import <MetaWear/MetaWear.h>
+#import "DeviceConfiguration.h"
 #import "MBProgressHUD.h"
 
 @interface ScanTableViewController ()
@@ -87,8 +87,13 @@
 {
     [self.selected.led setLEDOn:NO withOptions:1];
     if (buttonIndex == 1) {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.labelText = @"Programming...";
         [self.selected rememberDevice];
-        [self.navigationController popViewControllerAnimated:YES];
+        [self.selected setConfiguration:[[DeviceConfiguration alloc] init] handler:^(NSError *error) {
+            [hud hide:YES];
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
     }
 }
 
