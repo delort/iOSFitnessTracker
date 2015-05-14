@@ -9,5 +9,5 @@
 #import <MetaWear/MetaWear.h>
 
 @interface DeviceConfiguration : NSObject <MBLRestorable>
-@property (nonatomic, strong) MBLEvent *summedRMS;
+@property (nonatomic, strong) MBLEvent *differentialSummedRMS;
 @end

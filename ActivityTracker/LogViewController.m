@@ -30,7 +30,6 @@
 @property (nonatomic, strong) NSMutableArray *logData;
 @property (nonatomic, strong) NSMutableArray *chartData;
 @property (nonatomic, strong) NSMutableArray *timeData;
-@property (nonatomic, strong) NSNumber *previousEntry;
 @property (nonatomic) BOOL doingReset;
 @end
 
@@ -169,27 +168,17 @@ static NSInteger const StepsPerMile = 2000;
         self.statusLabel.text = @"Syncing...";
         
         DeviceConfiguration *configuration = self.device.configuration;
-        [configuration.summedRMS downloadLogAndStopLogging:NO handler:^(NSArray *array, NSError *error)  {
+        [configuration.differentialSummedRMS downloadLogAndStopLogging:NO handler:^(NSArray *array, NSError *error)  {
             if (error) {
                 [[[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil] show];
             } else {
-                for (MBLNumericData *data in array) {
+                for (MBLRMSAccelerometerData *data in array) {
                     NSLog(@"Activity added: %@", data);
-                    if (self.previousEntry) {
-                        uint32_t curVal = data.value.unsignedIntValue;
-                        uint32_t prevVal = self.previousEntry.unsignedIntValue;
-                        uint32_t delta;
-                        if (curVal >= prevVal) {
-                            delta = curVal - prevVal;
-                        } else { // rollover
-                            delta = (UINT32_MAX - prevVal) + curVal;
-                        }
-                        [self.logData addObject:[[LogEntry alloc] initWithTotalRMS:[NSNumber numberWithUnsignedInt:delta] timestamp:data.timestamp]];
+                        [self.logData addObject:[[LogEntry alloc] initWithTotalRMS:[NSNumber numberWithFloat:data.rms] timestamp:data.timestamp]];
                         if (self.logData.count > BarChartViewControllerNumBars) {
                             [self.logData removeObjectAtIndex:0];
                         }
                     }
-                    self.previousEntry = data.value;
                 }
                 [NSKeyedArchiver archiveRootObject:self.logData toFile:self.logFilename];
 
@@ -202,8 +191,6 @@ static NSInteger const StepsPerMile = 2000;
                 }
                 self.progressBar.hidden = YES;
                 self.statusLabel.text = @"Logging...";
-            }
-            
             // We have our data so get outta here
             [self.device disconnectWithHandler:nil];
         } progressHandler:^(float number, NSError *error) {
@@ -247,8 +234,20 @@ static NSInteger const StepsPerMile = 2000;
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     MBLMetaWear *device = self.device;
     [device connectWithHandler:^(NSError *error) {
+        if (error) {
+            [[[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil] show];
+            return;
+        }
         [device setConfiguration:device.configuration handler:^(NSError *error) {
+            if (error) {
+                [[[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil] show];
+                return;
+            }
             [device disconnectWithHandler:^(NSError *error) {
+                if (error) {
+                    [[[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil] show];
+                    return;
+                }
                 [hud hide:YES];
             }];
         }];

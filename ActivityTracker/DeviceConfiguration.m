@@ -14,25 +14,25 @@
 {
     self = [super init];
     if (self) {
-        self.summedRMS = [aDecoder decodeObjectForKey:@"summedRMS"];
+        self.differentialSummedRMS = [aDecoder decodeObjectForKey:@"differentialSummedRMS"];
     }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-    [aCoder encodeObject:self.summedRMS forKey:@"summedRMS"];
+    [aCoder encodeObject:self.differentialSummedRMS forKey:@"differentialSummedRMS"];
 }
 
 - (void)runOnDeviceBoot:(MBLMetaWear *)device
 {
     device.accelerometer.fullScaleRange = MBLAccelerometerRange8G;
-    device.accelerometer.filterCutoffFreq = 0;
+    device.accelerometer.highPassCutoffFreq = MBLAccelerometerCutoffFreqHigheset;
     device.accelerometer.highPassFilter = YES;
     
     // Program to sum accelerometer RMS and log sample every minute
-    self.summedRMS = [[device.accelerometer.rmsDataReadyEvent summationOfEvent] periodicSampleOfEvent:60000];
-    [self.summedRMS startLogging];
+    self.differentialSummedRMS = [[device.accelerometer.rmsDataReadyEvent summationOfEvent] differentialSampleOfEvent:60000];
+    [self.differentialSummedRMS startLogging];
 }
 
 @end

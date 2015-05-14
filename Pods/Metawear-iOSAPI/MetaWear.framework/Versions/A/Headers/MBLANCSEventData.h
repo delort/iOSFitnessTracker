@@ -33,12 +33,29 @@
  * contact MbientLab Inc, at www.mbientlab.com.
  */
 
-#import <MetaWear/MBLLogEntry.h>
+#import <MetaWear/MBLDataSample.h>
 #import <MetaWear/MBLANCS.h>
 
-@interface MBLANCSEventData : MBLLogEntry
+/**
+ Data encapsulation for an ANCS event.
+ */
+@interface MBLANCSEventData : MBLDataSample
+
+/**
+ This field informs whether the given iOS notification was added, modified, or removed
+ */
 @property (nonatomic, readonly) MBLANCSEventID eventId;
+/**
+ A bitmask whose set bits inform the specificities with the iOS notification
+ */
 @property (nonatomic, readonly) MBLANCSEventFlag eventFlags;
+/**
+ A value providing a category in which the iOS notification can be classified
+ */
 @property (nonatomic, readonly) MBLANCSCategoryID categoryId;
+/**
+ The current number of active iOS notifications in the given category
+ */
 @property (nonatomic, readonly) uint8_t categoryCount;
+
 @end

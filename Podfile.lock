@@ -1,13 +1,13 @@
 PODS:
-  - MBProgressHUD (0.9)
-  - Metawear-iOSAPI (1.5.1)
+  - MBProgressHUD (0.9.1)
+  - Metawear-iOSAPI (1.6.0)
 
 DEPENDENCIES:
   - MBProgressHUD
   - Metawear-iOSAPI
 
 SPEC CHECKSUMS:
-  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
-  Metawear-iOSAPI: 9b21c1a724806df39abf6e7a4042bbeaaa8372ec
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  Metawear-iOSAPI: 7b46ce8fb19cd93c15d72c40d778a7236f49a282
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.37.1

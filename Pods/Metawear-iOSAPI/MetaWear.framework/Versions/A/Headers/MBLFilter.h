@@ -35,6 +35,9 @@
 
 #import <MetaWear/MBLEvent.h>
 
+/**
+ The MBLFilter takes an MBLEvent as input, then performs some operation and produces an output.
+ */
 @interface MBLFilter : MBLEvent <NSCoding>
 
 /**

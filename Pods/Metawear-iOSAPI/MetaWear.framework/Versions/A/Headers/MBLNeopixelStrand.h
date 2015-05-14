@@ -1,8 +1,8 @@
 /**
- * MBLOrientationData.h
+ * MBLNeopixelStrand.h
  * MetaWear
  *
- * Created by Stephen Schiffli on 10/15/14.
+ * Created by Stephen Schiffli on 3/2/15.
  * Copyright 2014 MbientLab Inc. All rights reserved.
  *
  * IMPORTANT: Your use of this Software is limited to those specific rights
@@ -33,18 +33,46 @@
  * contact MbientLab Inc, at www.mbientlab.com.
  */
 
-#import <MetaWear/MBLDataSample.h>
-
-typedef NS_ENUM(uint8_t, MBLAccelerometerOrientation) {
-    MBLAccelerometerOrientationPortrait = 0,
-    MBLAccelerometerOrientationPortraitUpsideDown = 1,
-    MBLAccelerometerOrientationLandscapeRight = 2,
-    MBLAccelerometerOrientationLandscapeLeft = 3
-};
+#import <MetaWear/MBLNeopixel.h>
+#import <UIKit/UIKit.h>
 
 /**
- Container for orientation data
+ Interface to a strand of NeoPixels
  */
-@interface MBLOrientationData : MBLDataSample
-@property (nonatomic) MBLAccelerometerOrientation orientation;
+@interface MBLNeopixelStrand : NSObject <NSCoding>
+
+/**
+ Set Pixel at strand index.
+ @param pixel Pixel index to be set
+ @param color Color the LED will be set to
+ */
+- (void)setPixel:(uint8_t)pixel color:(UIColor *)color;
+
+/**
+ Clear Neopixel strand.
+ @param start Pixel index to start clearing from
+ @param end Pixel index to clear to, inclusive
+ */
+- (void)clearFromStartPixel:(uint8_t)startPixel endPixel:(uint8_t)endPixel;
+
+/**
+ Hold Neopixel strand.
+ @param enable Hold enable
+ */
+- (void)holdStrandWithEnable:(BOOL)enable;
+
+/**
+ Rotate strand at index.
+ @param index Strand number, can be in the range [0, 2]
+ @param direction Rotation direction
+ @param repetitions Number of times to repeat the rotation. Use 0xFF to rotate indefinitely, 0 to terminate
+ @param period Amount of time, in milliseconds, between rotations
+ */
+- (void)rotateStrandWithDirection:(MBLRotationDirection)direction repetitions:(uint8_t)repetitions period:(uint16_t)period;
+
+/**
+ Clears all pixels and puts strand into low power state
+ */
+- (void)turnStrandOff;
+
 @end

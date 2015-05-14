@@ -41,13 +41,19 @@
 
 @class MBLMetaWear;
 
-typedef NS_OPTIONS(uint8_t, MBLAccelerometerRange) {
+/**
+ Accelerometer sensitiviy ranges
+ */
+typedef NS_ENUM(uint8_t, MBLAccelerometerRange) {
     MBLAccelerometerRange2G = 0,
     MBLAccelerometerRange4G = 1,
     MBLAccelerometerRange8G = 2
 };
 
-typedef NS_OPTIONS(uint8_t, MBLAccelerometerSampleFrequency) {
+/**
+ Accelerometer sample frequencies
+ */
+typedef NS_ENUM(uint8_t, MBLAccelerometerSampleFrequency) {
     MBLAccelerometerSampleFrequency800Hz = 0,
     MBLAccelerometerSampleFrequency400Hz = 1,
     MBLAccelerometerSampleFrequency200Hz = 2,
@@ -58,30 +64,52 @@ typedef NS_OPTIONS(uint8_t, MBLAccelerometerSampleFrequency) {
     MBLAccelerometerSampleFrequency1_56Hz = 7
 };
 
-typedef NS_OPTIONS(uint8_t, MBLAccelerometerSleepSampleFrequency) {
+/**
+ Accelerometer sleep sample frequencies
+ */
+typedef NS_ENUM(uint8_t, MBLAccelerometerSleepSampleFrequency) {
     MBLAccelerometerSleepSampleFrequency50Hz = 0,
     MBLAccelerometerSleepSampleFrequency12_5Hz = 1,
     MBLAccelerometerSleepSampleFrequency6_25Hz = 2,
     MBLAccelerometerSleepSampleFrequency1_56Hz = 3
 };
 
-typedef NS_OPTIONS(uint8_t, MBLAccelerometerPowerScheme) {
+/**
+ Accelerometer power modes
+ */
+typedef NS_ENUM(uint8_t, MBLAccelerometerPowerScheme) {
     MBLAccelerometerPowerSchemeNormal = 0,
     MBLAccelerometerPowerSchemeLowNoiseLowPower = 1,
     MBLAccelerometerPowerSchemeHighResolution = 2,
     MBLAccelerometerPowerSchemeLowerPower = 3,
 };
 
-typedef NS_OPTIONS(uint8_t, MBLAccelerometerAxis) {
+/**
+ Accelerometer axis
+ */
+typedef NS_ENUM(uint8_t, MBLAccelerometerAxis) {
     MBLAccelerometerAxisX = 0,
     MBLAccelerometerAxisY = 1,
     MBLAccelerometerAxisZ = 2
 };
 
-typedef NS_OPTIONS(uint8_t, MBLAccelerometerTapType) {
+/**
+ Accelerometer tap types
+ */
+typedef NS_ENUM(uint8_t, MBLAccelerometerTapType) {
     MBLAccelerometerTapTypeSingle = 0,
     MBLAccelerometerTapTypeDouble = 1,
     MBLAccelerometerTapTypeBoth = 2
+};
+
+/**
+ Accelerometer tap types
+ */
+typedef NS_ENUM(uint8_t, MBLAccelerometerCutoffFreq) {
+    MBLAccelerometerCutoffFreqHigheset = 0,
+    MBLAccelerometerCutoffFreqHigh = 1,
+    MBLAccelerometerCutoffFreqMedium = 2,
+    MBLAccelerometerCutoffFreqLow = 3
 };
 
 /**
@@ -93,13 +121,18 @@ typedef NS_OPTIONS(uint8_t, MBLAccelerometerTapType) {
  */
 @property (nonatomic) MBLAccelerometerRange fullScaleRange;
 /**
- High-pass filter enable; YES: Output data high-pass filtered, NO: No filter
+ High-pass filter enable; YES: Output data high-pass filtered, NO: No filter.
+ With a high-pass filter, the frequencies below the cutoff (see highPassCutoffFreq),
+ are removed. Only the high frequencies pass through.  This means that when
+ enabled, you will only see changes in acceleration and not constant forces, like
+ gravity.
  */
 @property (nonatomic) BOOL highPassFilter;
 /**
- HPF Cutoff frequency selection (0 is highest freq, 3 is lowest freq)
+ High-pass filter cutoff frequency selection.  The higher the frequency the
+ less you will see of slow acceleration changes.
  */
-@property (nonatomic) uint8_t filterCutoffFreq;
+@property (nonatomic) MBLAccelerometerCutoffFreq highPassCutoffFreq;
 /**
  Data rate selection
  */
@@ -147,33 +180,59 @@ typedef NS_OPTIONS(uint8_t, MBLAccelerometerTapType) {
 
 
 /**
- Event representing a new accelerometer data sample. This event will
- occur at sampleFrequency. Event callbacks will be provided an 
- MBLAccelerometerData object.
+ Event representing a new accelerometer data sample complete with x, y,
+ and z axis data.  This event will occur at sampleFrequency. Event 
+ callbacks will be provided an MBLAccelerometerData object.
  */
 @property (nonatomic, strong, readonly) MBLEvent *dataReadyEvent;
 /**
- Event representing a new accelerometer data sample, but filtered down to just an RMS value.
+ Event representing a new accelerometer X axis sample. This event
+ will occur at sampleFrequency. Event callbacks will be provided an
+ MBLNumericData object whose float value will be acceleration in G's.
+ */
+@property (nonatomic, strong, readonly) MBLEvent *xAxisReadyEvent;
+/**
+ Event representing a new accelerometer Y axis sample. This event
+ will occur at sampleFrequency. Event callbacks will be provided an
+ MBLNumericData object whose float value will be acceleration in G's.
+ */
+@property (nonatomic, strong, readonly) MBLEvent *yAxisReadyEvent;
+/**
+ Event representing a new accelerometer Z axis sample. This event
+ will occur at sampleFrequency. Event callbacks will be provided an
+ MBLNumericData object whose float value will be acceleration in G's.
+ */
+@property (nonatomic, strong, readonly) MBLEvent *zAxisReadyEvent;
+/**
+ Event representing a new accelerometer data sample, but filtered down to 
+ just an RMS value. Event callbacks will be provided an MBLRMSAccelerometerData object
  */
 @property (nonatomic, strong, readonly) MBLEvent *rmsDataReadyEvent;
 /**
- Event representing a tap (single, double, or both based on tapType) on the tapDetectionAxis
+ Event representing a tap (single, double, or both based on tapType) on the tapDetectionAxis.
+ Event callbacks will be provided an empty MBLDataSample object
  */
 @property (nonatomic, strong, readonly) MBLEvent *tapEvent;
 /**
- Event representing an orientation change
+ Event representing an orientation change.
+ Event callbacks will be provided an MBLOrientationData object
  */
 @property (nonatomic, strong, readonly) MBLEvent *orientationEvent;
 /**
- Event representing free fall, event occurs every 100mSec while the device is in free fall
+ Event representing free fall, event occurs every 100mSec while the device is in free fall.
+ Event callbacks will be provided an empty MBLDataSample object
  */
 @property (nonatomic, strong, readonly) MBLEvent *freeFallEvent;
 /**
- Event representing a shake
+ Event representing a shake.
+ Event callbacks will be provided an empty MBLDataSample object
  */
 @property (nonatomic, strong, readonly) MBLEvent *shakeEvent;
 
 
+///----------------------------------
+/// @name Deprecated Methods
+///----------------------------------
 
 /**
  * @deprecated use [dataReadyEvent startNotificationsWithHandler] instead

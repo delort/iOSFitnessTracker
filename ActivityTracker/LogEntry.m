@@ -9,9 +9,9 @@
 #import "LogEntry.h"
 
 // Rough estimate of how many raw accelerometer counts are in a step
-static NSInteger const ActivityPerStep = 2000;
+static float const ActivityPerStep = 2.000;
 // Estimate of calories burned per step assuming casual walking speed @150 pounds
-static CGFloat const CaloriesPerStep = 0.045;
+static float const CaloriesPerStep = 0.045;
 
 @interface LogEntry ()
 @property (nonatomic) NSNumber *totalRMS;
@@ -40,7 +40,7 @@ static CGFloat const CaloriesPerStep = 0.045;
     if (self) {
         self.totalRMS = totalRMS;
         self.timestamp = timestamp;
-        self.steps = totalRMS.intValue / ActivityPerStep;
+        self.steps = totalRMS.floatValue / ActivityPerStep;
         self.calories = self.steps * CaloriesPerStep;
     }
     return self;
@@ -52,7 +52,7 @@ static CGFloat const CaloriesPerStep = 0.045;
     if (self) {
         self.totalRMS = [aDecoder decodeObjectForKey:@"totalRMS"];
         self.timestamp = [aDecoder decodeObjectForKey:@"time"];
-        self.steps = self.totalRMS.intValue / ActivityPerStep;
+        self.steps = self.totalRMS.floatValue / ActivityPerStep;
         self.calories = self.steps * CaloriesPerStep;
     }
     return self;

@@ -37,18 +37,27 @@
 @class MBLEvent;
 @class MBLData;
 
-typedef NS_OPTIONS(uint8_t, MBLPinConfiguration) {
+/**
+ Input pin configuration types
+ */
+typedef NS_ENUM(uint8_t, MBLPinConfiguration) {
     MBLPinConfigurationPullup = 0,
     MBLPinConfigurationPulldown = 1,
     MBLPinConfigurationNopull = 2
 };
 
-typedef NS_OPTIONS(uint8_t, MBLAnalogReadMode) {
+/**
+ Analog read modes
+ */
+typedef NS_ENUM(uint8_t, MBLAnalogReadMode) {
     MBLAnalogReadModeFixed = 0,
     MBLAnalogReadModeSupplyRatio = 1
 };
 
-typedef NS_OPTIONS(uint8_t, MBLPinChangeType) {
+/**
+ Pin change types
+ */
+typedef NS_ENUM(uint8_t, MBLPinChangeType) {
     MBLPinChangeTypeRising = 1,
     MBLPinChangeTypeFalling = 2,
     MBLPinChangeTypeAny = 3
@@ -71,19 +80,29 @@ typedef NS_OPTIONS(uint8_t, MBLPinChangeType) {
 
 /**
  Event representing a change in the pin's digital value, you can choose
- what state transitions trigger an event using the changeType property.
+ what state transitions trigger this event using the changeType property.
+ Event callbacks will be provided an MBLNumericData object whose bool
+ value indicates what state the pin changed to, YES means set, NO means
+ clear.
  */
 @property (nonatomic, strong, readonly) MBLEvent *changeEvent;
 /**
- Data representing the digital (0 or 1) value of the pin
+ Data representing the digital value of the pin.
+ Event callbacks will be provided an MBLNumericData object whose bool
+ value indicates what state the pin is in, YES means set, NO means clean.
  */
 @property (nonatomic, strong, readonly) MBLData *digitalValue;
 /**
- Data representing the analog value of the pin in volts
+ Data representing the analog value of the pin.
+ Event callbacks will be provided an MBLNumericData object whose float
+ value will be volts.
  */
 @property (nonatomic, strong, readonly) MBLData *analogAbsolute;
 /**
- Data representing the analog value of the pin as a ratio of the supply voltage
+ Data representing the analog value of the pin as a ratio of the supply voltage.
+ Event callbacks will be provided an MBLNumericData object whose float value
+ will range from 0.0 to 1.0, where 0.0 indicates pin is equal to
+ ground, and 1.0 indicates pin is equal to supply voltage.
  */
 @property (nonatomic, strong, readonly) MBLData *analogRatio;
 
@@ -96,7 +115,7 @@ typedef NS_OPTIONS(uint8_t, MBLPinChangeType) {
 
 
 ///----------------------------------
-/// @name Deprecated Functions
+/// @name Deprecated Methods
 ///----------------------------------
 
 /**

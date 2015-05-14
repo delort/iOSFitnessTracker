@@ -48,9 +48,13 @@
 @class MBLANCS;
 @class MBLI2C;
 @class MBLTimer;
+@class MBLGSR;
+@class MBLBarometer;
 
-
-typedef NS_OPTIONS(uint8_t, MBLTransmitPower) {
+/**
+ BLE transmiter power
+ */
+typedef NS_ENUM(uint8_t, MBLTransmitPower) {
     MBLTransmitPower4dBm,
     MBLTransmitPower0dBm,
     MBLTransmitPowerMinus4dBm,
@@ -66,11 +70,11 @@ typedef NS_OPTIONS(uint8_t, MBLTransmitPower) {
 /**
  An MBLRestorable object is used to persist state across resets and disconnects.
  You create an object that conforms to this protocol and then assing it to an
- MBLMetaWear object using the setConfiguration:handler: function
+ MBLMetaWear object using the setConfiguration:handler: method
  */
 @protocol MBLRestorable <NSObject, NSCoding>
 /**
- Any API calls in this function will be persisted in non-volatile memory on the
+ Any API calls in this method will be persisted in non-volatile memory on the
  MetaWear, so upon power cycle it will setup the device with whatever you want automatically
  */
 - (void)runOnDeviceBoot:(MBLMetaWear *)device;
@@ -133,13 +137,22 @@ typedef NS_OPTIONS(uint8_t, MBLTransmitPower) {
  */
 @property (nonatomic, strong, readonly) MBLTimer *timer;
 /**
- + MBLTimer object contains all methods for performing raw I2C read/writes
- + */
+ MBLTimer object contains all methods for performing raw I2C read/writes
+ */
 @property (nonatomic, strong, readonly) MBLI2C *i2c;
+/**
+ MBLGSR object contains all methods for perfoming GSR reads
+ */
+@property (nonatomic, strong, readonly) MBLGSR *gsr;
+/**
+ MBLBarometer object contains all methods for interacting with the barometer sensor
+ */
+@property (nonatomic, strong, readonly) MBLBarometer *barometer;
 /**
  MBLDeviceInfo object contains version information about the device
  */
 @property (nonatomic, strong, readonly) MBLDeviceInfo *deviceInfo;
+
 
 ///----------------------------------
 /// @name Persistent Configuration Settings
@@ -155,7 +168,7 @@ typedef NS_OPTIONS(uint8_t, MBLTransmitPower) {
  Program MetaWear with persistance settings.  This only needs to be called once, likely 
  after you confirm the device from a scanning screen or such.  Upon calling it will
  erase all non-volatile memory the device (which requires disconnect), then perform reset, 
- then once its comes back online we will connect and invoke the runOnDeviceBoot function.
+ then once its comes back online we will connect and invoke the runOnDeviceBoot method.
  These settings will be persisted device side so after any future reset these settings
  will be applied automatically.
  @param configuration Pointer to object containing programming commands.  Writing nil
@@ -193,6 +206,10 @@ typedef NS_OPTIONS(uint8_t, MBLTransmitPower) {
  result in a smaller connection radius, default is MBLTransmitPower0dBm.
  */
 @property (nonatomic) MBLTransmitPower transmitPower;
+/**
+ Set a raw value into the scan response BLE advertising packet
+ */
+@property (nonatomic, strong) NSData *scanResponse;
 
 ///----------------------------------
 /// @name Pairing/Bonding
@@ -291,7 +308,7 @@ typedef NS_OPTIONS(uint8_t, MBLTransmitPower) {
 
 
 ///----------------------------------
-/// @name Deprecated Functions
+/// @name Deprecated Methods
 ///----------------------------------
 
 /**

@@ -38,15 +38,30 @@
 
 
 /**
+ Valid Firmware Versions
+ */
+typedef NS_ENUM(uint8_t, MBLFirmwareVersion) {
+    MBLFirmwareVersion0_4_1,
+    MBLFirmwareVersion0_6_0,
+    MBLFirmwareVersion0_8_0,
+    MBLFirmwareVersion0_8_6,
+    MBLFirmwareVersion0_9_0,
+    MBLFirmwareVersion1_0_0,
+    MBLFirmwareVersion1_0_1,
+    MBLFirmwareVersion1_0_3
+};
+
+/**
  The MBLMetaWearManager is responsible for the scanning and discovery of MBLMetaWear devices.
  */
 @interface MBLMetaWearManager : NSObject
 
 /**
- If set to YES, an alert view box will pop up if a connected MetaWear is not
- on the latest firmware, otherwise no alert.
+ Set the minimum firmware version required to run your app.  If you attempt to connect
+ to a device with older firmware you will recieve a connection error.
+ This defaults to oldest firmware supported by this API.
  */
-@property (nonatomic) BOOL alertIfNewerFirmware;
+@property (nonatomic) MBLFirmwareVersion minimumRequiredVersion;
 
 ///----------------------------------
 /// @name Getting the Shared Instance
@@ -113,9 +128,9 @@
 ///----------------------------------
 
 /**
- This function is intended for recovery mode only.  If a firmware update experiences an unexpected error,
+ This method is intended for recovery mode only.  If a firmware update experiences an unexpected error,
  the device may get stuck in the bootloader and thus won't show up in startScanForMetaWearsWithHandler:.
- This function will start scanning for devices in bootloader mode
+ This method will start scanning for devices in bootloader mode
  @param duplicates YES: only callback when a new device is found, NO: callback each time
  a new advertising packet is found
  @param handler Callback to handle each time a new device is found
@@ -132,7 +147,7 @@
 - (void)stopScanForMetaBoots;
 
 ///----------------------------------
-/// @name Deprecated Functions
+/// @name Deprecated Methods
 ///----------------------------------
 
 /**
