@@ -26,13 +26,24 @@
 
 - (void)runOnDeviceBoot:(MBLMetaWear *)device
 {
-    device.accelerometer.fullScaleRange = MBLAccelerometerRange8G;
-    device.accelerometer.highPassCutoffFreq = MBLAccelerometerCutoffFreqHigheset;
-    device.accelerometer.highPassFilter = YES;
+    if ([device.accelerometer isKindOfClass:[MBLAccelerometerMMA8452Q class]]) {
+        MBLAccelerometerMMA8452Q *accelerometer = (MBLAccelerometerMMA8452Q *)device.accelerometer;
     
-    // Program to sum accelerometer RMS and log sample every minute
-    self.differentialSummedRMS = [[device.accelerometer.rmsDataReadyEvent summationOfEvent] differentialSampleOfEvent:60000];
-    [self.differentialSummedRMS startLogging];
+        accelerometer.sampleFrequency = 100;
+        accelerometer.fullScaleRange = MBLAccelerometerRange8G;
+        accelerometer.highPassCutoffFreq = MBLAccelerometerCutoffFreqHigheset;
+        accelerometer.highPassFilter = YES;
+        
+        // Program to sum accelerometer RMS and log sample every minute
+        self.differentialSummedRMS = [[accelerometer.rmsDataReadyEvent summationOfEvent] differentialSampleOfEvent:60000];
+        [self.differentialSummedRMS startLogging];
+    } else {
+        [[[UIAlertView alloc] initWithTitle:@"Error"
+                                    message:@"This MetaWear hardware version has not yet been enabled for Activity Tracking"
+                                   delegate:nil
+                          cancelButtonTitle:@"Okay"
+                          otherButtonTitles:nil] show];
+    }
 }
 
 @end
