@@ -37,20 +37,6 @@
 
 @implementation DeviceConfiguration
 
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super init];
-    if (self) {
-        self.differentialSummedRMS = [aDecoder decodeObjectForKey:@"differentialSummedRMS"];
-    }
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder
-{
-    [aCoder encodeObject:self.differentialSummedRMS forKey:@"differentialSummedRMS"];
-}
-
 - (void)runOnDeviceBoot:(MBLMetaWear *)device
 {
     if ([device.accelerometer isKindOfClass:[MBLAccelerometerMMA8452Q class]]) {
@@ -64,6 +50,14 @@
         // Program to sum accelerometer RMS and log sample every minute
         self.differentialSummedRMS = [[accelerometer.rmsDataReadyEvent summationOfEvent] differentialSampleOfEvent:60000];
         [self.differentialSummedRMS startLogging];
+    } else if ([device.accelerometer isKindOfClass:[MBLAccelerometerBMI160 class]]) {
+        MBLAccelerometerBMI160 *accelerometer = (MBLAccelerometerBMI160 *)device.accelerometer;
+        // TODO: Implement this
+        [[[UIAlertView alloc] initWithTitle:@"Error"
+                                    message:@"This MetaWear hardware version has not yet been enabled for Activity Tracking"
+                                   delegate:nil
+                          cancelButtonTitle:@"Okay"
+                          otherButtonTitles:nil] show];
     } else {
         [[[UIAlertView alloc] initWithTitle:@"Error"
                                     message:@"This MetaWear hardware version has not yet been enabled for Activity Tracking"
