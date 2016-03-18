@@ -33,16 +33,28 @@
  * contact MbientLab via email: hello@mbientlab.com
  */
 
-#import <MetaWear/MBLEvent.h>
+#import <MetaWear/MBLEntityEvent.h>
+@class MBLData<ResultType>;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  The MBLFilter takes an MBLEvent as input, then performs some operation and produces an output.
  */
-@interface MBLFilter : MBLEvent
+@interface MBLFilter<ResultType> : MBLEntityEvent<ResultType>
 
 /**
  Reset the internal state of the filter
  */
-- (void)reset;
+- (BFTask *)resetAsync;
+
+/**
+ Create a new event that will periodically read this filter data until canceled.
+ @param period Period time in mSec
+ @returns New event that will read this data periodically
+ */
+- (MBLEvent<ResultType> *)periodicReadWithPeriod:(uint32_t)period;
 
 @end
+
+NS_ASSUME_NONNULL_END

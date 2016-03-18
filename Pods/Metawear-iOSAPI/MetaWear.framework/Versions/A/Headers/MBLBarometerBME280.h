@@ -1,9 +1,9 @@
 /**
- * MBLGSR.h
+ * MBLBarometerBME280.h
  * MetaWear
  *
- * Created by Stephen Schiffli on 4/16/15.
- * Copyright 2014-2015 MbientLab Inc. All rights reserved.
+ * Created by Stephen Schiffli on 2/22/16.
+ * Copyright 2016 MbientLab Inc. All rights reserved.
  *
  * IMPORTANT: Your use of this Software is limited to those specific rights
  * granted under the terms of a software license agreement between the user who
@@ -33,52 +33,35 @@
  * contact MbientLab via email: hello@mbientlab.com
  */
 
-#import <MetaWear/MBLModule.h>
+#import <MetaWear/MBLBarometerBosch.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
- Gain applied in the GSR circuit
+ Barometer standby times
  */
-typedef NS_ENUM(uint8_t, MBLGSRGain) {
-    MBLGSRGain499K = 0,
-    MBLGSRGain1M = 1
+typedef NS_ENUM(uint8_t, MBLBarometerBME280Standby) {
+    MBLBarometerBME280Standby0_5 = 0,
+    MBLBarometerBME280Standby10 = 6,
+    MBLBarometerBME280Standby20 = 7,
+    MBLBarometerBME280Standby62_5 = 1,
+    MBLBarometerBME280Standby125 = 2,
+    MBLBarometerBME280Standby250 = 3,
+    MBLBarometerBME280Standby500 = 4, // default
+    MBLBarometerBME280Standby1000 = 5
 };
 
 /**
- Constant voltage applied on the GSR electrodes
+ Interface to a BME280 pressure sensor
  */
-typedef NS_ENUM(uint8_t, MBLGSRVoltage) {
-    MBLGSRVoltage500mV = 1,
-    MBLGSRVoltage250mV = 0
-};
+@interface MBLBarometerBME280 : MBLBarometerBosch
 
 /**
- Interface to on-board GSR sensor
+ Set the standby time for the periodicAltitidue and periodicPressure events.
+ That is how long the device sleeps between successive measurements
  */
-@interface MBLGSR : MBLModule
-
-/**
- Gain applied in the GSR circuit
- */
-@property (nonatomic) MBLGSRGain gain;
-/**
- Constant voltage applied on the GSR electrodes
- */
-@property (nonatomic) MBLGSRVoltage voltage;
-
-
-/**
- Array of MBLData objects. The index corresponds to the GSR channel
- number, for example, channels[0] returns an MBLData corresponding
- to channel 0, which can be used for perfoming single channel reads.
- Callbacks will be provided an MBLNumericData object.
- */
-@property (nonatomic, readonly, nonnull) NSArray *channels;
-
-/**
- Perform automatic GSR calibration.  This should be called when
- temperature changes, or it can just be called periodically as
- it's low overhead.
- */
-- (void)calibrate;
+@property (nonatomic) MBLBarometerBME280Standby standbyTime;
 
 @end
+
+NS_ASSUME_NONNULL_END

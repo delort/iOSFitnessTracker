@@ -35,6 +35,10 @@
 
 #import <MetaWear/MBLModule.h>
 #import <MetaWear/MBLEvent.h>
+@class MBLGyroData;
+@class MBLNumericData;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  Gyro axis
@@ -61,31 +65,33 @@ typedef NS_ENUM(uint8_t, MBLGyroAxis) {
  check the timestamps of the delivered MBLGyroData instances to determine the
  true update interval.
  */
-@property (nonatomic) float sampleFrequency;
+@property (nonatomic) double sampleFrequency;
 
 /**
  Event representing a new gryo data sample complete with x, y, and z
  axis data. This event will occur at the neareast hardware value
  to sampleFrequency. Event callbacks will be provided an MBLGyroData object.
  */
-@property (nonatomic, readonly, nonnull) MBLEvent *dataReadyEvent;
+@property (nonatomic, readonly) MBLEvent<MBLGyroData *> *dataReadyEvent;
 /**
  Event representing a new gyro X-axis sample. This event will occur
  at sampleFrequency. Event callbacks will be provided an MBLNumericData
- object whose float value will be rotation rate in degrees per second.
+ object whose double value will be rotation rate in degrees per second.
  */
-@property (nonatomic, readonly, nonnull) MBLEvent *xAxisReadyEvent;
+@property (nonatomic, readonly) MBLEvent<MBLNumericData *> *xAxisReadyEvent;
 /**
  Event representing a new gyro Y-axis sample. This event will occur
  at sampleFrequency. Event callbacks will be provided an MBLNumericData
- object whose float value will be rotation rate in degrees per second.
+ object whose double value will be rotation rate in degrees per second.
  */
-@property (nonatomic, readonly, nonnull) MBLEvent *yAxisReadyEvent;
+@property (nonatomic, readonly) MBLEvent<MBLNumericData *> *yAxisReadyEvent;
 /**
  Event representing a new gyro Z-axis sample. This event will occur
  at sampleFrequency. Event callbacks will be provided an MBLNumericData
- object whose float value will be rotation rate in degrees per second.
+ object whose double value will be rotation rate in degrees per second.
  */
-@property (nonatomic, readonly, nonnull) MBLEvent *zAxisReadyEvent;
+@property (nonatomic, readonly) MBLEvent<MBLNumericData *> *zAxisReadyEvent;
 
 @end
+
+NS_ASSUME_NONNULL_END

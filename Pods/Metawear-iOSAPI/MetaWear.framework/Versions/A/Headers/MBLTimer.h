@@ -33,13 +33,24 @@
  * contact MbientLab via email: hello@mbientlab.com
  */
 
-#import <MetaWear/MBLModule.h>
+#import <MetaWear/MBLEntityModule.h>
 #import <MetaWear/MBLEvent.h>
+@class MBLDataSample;
+@class MBLTimerEvent<ResultType>;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  Interface to timer module
  */
-@interface MBLTimer : MBLModule
+@interface MBLTimer : MBLEntityModule
+
+/**
+ Create a new event that will trigger periodically until canceled.
+ @param period Period time in mSec
+ @returns New event that will trigger periodically
+ */
+- (MBLTimerEvent<MBLDataSample *> *)eventWithPeriod:(uint32_t)period;
 
 /**
  Create a new event that will trigger periodically a fixed number of times.
@@ -47,31 +58,32 @@
  @param repeatCount Number of times event will be triggered, 0xFFFF will repeat forever
  @returns New event that will trigger periodically
  */
-- (MBLEvent *)eventWithPeriod:(uint32_t)period
-                  repeatCount:(uint16_t)repeatCount;
-
+- (MBLTimerEvent<MBLDataSample *> *)eventWithPeriod:(uint32_t)period
+                                        repeatCount:(uint16_t)repeatCount;
 /**
- Create a new event that will trigger periodically until canceled.
+ Create a new event that will trigger periodically a fixed number of times.
  @param period Period time in mSec
+ @param repeatCount Number of times event will be triggered, 0xFFFF will repeat forever
+ @param autoStart Should the timer automatically be started when it is used
  @returns New event that will trigger periodically
  */
-- (MBLEvent *)eventWithPeriod:(uint32_t)period;
-
-///----------------------------------
-/// @name Deprecated Methods
-///----------------------------------
+- (MBLTimerEvent<MBLDataSample *> *)eventWithPeriod:(uint32_t)period
+                                        repeatCount:(uint16_t)repeatCount
+                                          autoStart:(BOOL)autoStart;
 
 /**
- * @deprecated create an MBLRestorable object and use [MBLMetaWear setConfiguration:handler:] instead
+ Create a new event that will trigger periodically a fixed number of times.
+ @param period Period time in mSec
+ @param repeatCount Number of times event will be triggered, 0xFFFF will repeat forever
+ @param autoStart Should the timer automatically be started when it is used
+ @param triggerOnStart Should the timer's first event occur when it starts or after one period
+ @returns New event that will trigger periodically
  */
-- (MBLEvent *)eventWithPeriod:(uint32_t)period
-                   identifier:(NSString *)identifier DEPRECATED_MSG_ATTRIBUTE("Create an MBLRestorable object and use [MBLMetaWear setConfiguration:handler:] instead");
-
-/**
- * @deprecated create an MBLRestorable object and use [MBLMetaWear setConfiguration:handler:] instead
- */
-- (MBLEvent *)eventWithPeriod:(uint32_t)period
-                  repeatCount:(uint16_t)repeatCount
-                   identifier:(NSString *)identifier DEPRECATED_MSG_ATTRIBUTE("Create an MBLRestorable object and use [MBLMetaWear setConfiguration:handler:] instead");
+- (MBLTimerEvent<MBLDataSample *> *)eventWithPeriod:(uint32_t)period
+                                        repeatCount:(uint16_t)repeatCount
+                                          autoStart:(BOOL)autoStart
+                                     triggerOnStart:(BOOL)triggerOnStart;
 
 @end
+
+NS_ASSUME_NONNULL_END

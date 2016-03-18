@@ -73,6 +73,18 @@ static float const CaloriesPerStep = 0.045;
     return self;
 }
 
+- (instancetype)initWithSteps:(int)steps timestamp:(NSDate *)timestamp
+{
+    self = [super init];
+    if (self) {
+        self.totalRMS = [NSNumber numberWithFloat:(float)steps * ActivityPerStep];
+        self.timestamp = timestamp;
+        self.steps = steps;
+        self.calories = steps * CaloriesPerStep;
+    }
+    return self;
+}
+
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super init];

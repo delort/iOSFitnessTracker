@@ -34,6 +34,15 @@
  */
 
 #import <MetaWear/MBLModule.h>
+#import <MetaWear/MBLConstants.h>
+#import <Bolts/Bolts.h>
+@class MBLEvent<ResultType>;
+@class MBLData<ResultType>;
+@class MBLStringData;
+@class MBLDataSample;
+@class MBLNumericData;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  BLE transmiter power
@@ -56,7 +65,7 @@ typedef NS_ENUM(uint8_t, MBLTransmitPower) {
  This should be carefully considered, because it affects the time to discovery 
  and connect performance, and also battery life.
  */
-@property (nonatomic) float advertisingInterval;
+@property (nonatomic) double advertisingInterval;
 /**
  Advertising timeout in seconds. Valid range is [0, 180], use 0 for unlimited 
  advertising (0 is default)
@@ -83,12 +92,30 @@ typedef NS_ENUM(uint8_t, MBLTransmitPower) {
  */
 @property (nonatomic) BOOL circularBufferLog;
 
+/**
+ Event representing a BLE disconnection event.  Note this doesn't make sense to
+ stream, but it's likely that programCommandsToRunOnEventAsync will have utility.
+ Event callbacks will be provided an MBLDataSample object.
+ */
+@property (nonatomic, readonly, nullable) MBLEvent<MBLDataSample *> *disconnectEvent;
+
+/**
+ Get the MAC address of the MetaWear
+ Event callbacks will be provided an MBLStringData object.
+ */
+@property (nonatomic, readonly, nullable) MBLData<MBLStringData *> *macAddress;
+
+/**
+ Percent remaining battery life, returns int between 0-100
+ */
+@property (nonatomic, readonly, nullable) MBLData<MBLNumericData *> *batteryRemaining;
+
 
 /**
  Start the pairing process which creates a persistent bond between the
  MetaWear and iOS device
  */
-- (void)initiatePairing;
+- (BFTask *)initiatePairingAsync;
 /**
  Removes all bonding information stored on the MetaWear.  The delete will
  actually occur on the next disconnect.
@@ -97,14 +124,14 @@ typedef NS_ENUM(uint8_t, MBLTransmitPower) {
  Settings -> Bluetooth choose the device you want to remove and 
  select "Forget This Device"
  */
-- (void)deleteAllBonds;
+- (BFTask *)deleteAllBondsAsync;
 
 /**
  This call will start advertisement.  You can hook this call up to any MBLEvent
  if you need advanced ways to start advertising.  Note a button press it already
  hard coded to always trigger advertising, which should cover most cases.
  */
-- (void)startAdvertisement;
+- (BFTask *)startAdvertisementAsync;
 
 
 
@@ -131,6 +158,13 @@ typedef NS_ENUM(uint8_t, MBLTransmitPower) {
 /**
  Write all the above values to the device
  */
-- (void)applyConnectionParameters;
+- (BFTask *)applyConnectionParametersAsync;
+
+/**
+ Raw battery voltage in mV.  For enabling only, please use batteryRemaining instead.
+ */
+@property (nonatomic, readonly, nullable) MBLData<MBLNumericData *> *batteryVoltage;
 
 @end
+
+NS_ASSUME_NONNULL_END

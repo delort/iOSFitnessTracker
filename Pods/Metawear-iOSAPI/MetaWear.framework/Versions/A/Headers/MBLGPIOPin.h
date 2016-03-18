@@ -34,8 +34,12 @@
  */
 
 #import <MetaWear/MBLConstants.h>
-@class MBLEvent;
-@class MBLData;
+#import <Bolts/Bolts.h>
+@class MBLEvent<ResultType>;
+@class MBLData<ResultType>;
+@class MBLNumericData;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  Input pin configuration types
@@ -99,54 +103,36 @@ typedef NS_ENUM(uint8_t, MBLPinChangeType) {
  value indicates what state the pin changed to, YES means set, NO means
  clear.
  */
-@property (nonatomic, readonly, nonnull) MBLEvent *changeEvent;
+@property (nonatomic, readonly) MBLEvent<MBLNumericData *> *changeEvent;
 /**
  Data representing the digital value of the pin.
  Event callbacks will be provided an MBLNumericData object whose bool
  value indicates what state the pin is in, YES means set, NO means clear.
  */
-@property (nonatomic, readonly, nonnull) MBLData *digitalValue;
+@property (nonatomic, readonly) MBLData<MBLNumericData *> *digitalValue;
 /**
  Data representing the analog value of the pin.
- Event callbacks will be provided an MBLNumericData object whose float
+ Event callbacks will be provided an MBLNumericData object whose double
  value will be volts.
- @warning Only pins 0-3 can perform analog reads
+ @warning Not all pins support analog reads
  */
-@property (nonatomic, readonly, nullable) MBLData *analogAbsolute;
+@property (nonatomic, readonly) MBLData<MBLNumericData *> *analogAbsolute;
 /**
  Data representing the analog value of the pin as a ratio of the supply voltage.
- Event callbacks will be provided an MBLNumericData object whose float value
+ Event callbacks will be provided an MBLNumericData object whose double value
  will range from 0.0 to 1.0, where 0.0 indicates pin is equal to
  ground, and 1.0 indicates pin is equal to supply voltage.
- @warning Only pins 0-3 can perform analog reads
+ @warning Not all pins support analog reads
  */
-@property (nonatomic, readonly, nullable) MBLData *analogRatio;
+@property (nonatomic, readonly) MBLData<MBLNumericData *> *analogRatio;
 
 
 /**
  Set a digital output GPIO Pin to a 1 or 0.
- @param on YES sets pin to 1, NO clears pin to 0
+ @param on YES sets pin to 1 (high), NO clears pin to 0 (low)
  */
-- (void)setToDigitalValue:(BOOL)on;
-
-
-///----------------------------------
-/// @name Deprecated Methods
-///----------------------------------
-
-/**
- @deprecated use configuration property instead
- */
-- (void)configureType:(MBLPinConfiguration)type DEPRECATED_MSG_ATTRIBUTE("Use configuration property instead");
-
-/**
- @deprecated use [analogAbsolute readWithHandler:] or [analogRatio readWithHandler:] instead
- */
-- (void)readAnalogValueUsingMode:(MBLAnalogReadMode)mode handler:(nonnull MBLDecimalNumberHandler)handler DEPRECATED_MSG_ATTRIBUTE("Use [analogAbsolute readWithHandler:] or [analogRatio readWithHandler:] instead");
-
-/**
- @deprecated use [digitalValue readWithHandler:] instead
- */
-- (void)readDigitalValueWithHandler:(nonnull MBLBoolHandler)handler DEPRECATED_MSG_ATTRIBUTE("Use [digitalValue readWithHandler:] instead");
+- (BFTask *)setToDigitalValueAsync:(BOOL)on;
 
 @end
+
+NS_ASSUME_NONNULL_END

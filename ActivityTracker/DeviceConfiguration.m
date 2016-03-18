@@ -34,6 +34,13 @@
  */
 
 #import "DeviceConfiguration.h"
+#import "LogEntry.h"
+
+@interface DeviceConfiguration ()
+@property (nonatomic, strong) MBLEvent *differentialSummedRMS;
+@property (nonatomic, strong) MBLEvent *stepEvent;
+@property (nonatomic, strong) MBLEvent *dummyEvent;
+@end
 
 @implementation DeviceConfiguration
 
@@ -49,21 +56,53 @@
         
         // Program to sum accelerometer RMS and log sample every minute
         self.differentialSummedRMS = [[accelerometer.rmsDataReadyEvent summationOfEvent] differentialSampleOfEvent:60000];
-        [self.differentialSummedRMS startLogging];
+        [self.differentialSummedRMS startLoggingAsync];
     } else if ([device.accelerometer isKindOfClass:[MBLAccelerometerBMI160 class]]) {
         MBLAccelerometerBMI160 *accelerometer = (MBLAccelerometerBMI160 *)device.accelerometer;
-        // TODO: Implement this
-        [[[UIAlertView alloc] initWithTitle:@"Error"
-                                    message:@"This MetaWear hardware version has not yet been enabled for Activity Tracking"
-                                   delegate:nil
-                          cancelButtonTitle:@"Okay"
-                          otherButtonTitles:nil] show];
+        
+        // For the step counter to work, we need to enable the stepEvent, but we don't really need the
+        // step event data so we start logging it but just discard all data throught a switch filter
+        self.dummyEvent = [accelerometer.stepEvent conditionalDataSwitch:NO];
+        [self.dummyEvent startLoggingAsync];
+        
+        self.stepEvent = [[accelerometer.stepCounter periodicReadWithPeriod:500] differentialSampleOfEvent:60000];
+        [self.stepEvent startLoggingAsync];
     } else {
         [[[UIAlertView alloc] initWithTitle:@"Error"
                                     message:@"This MetaWear hardware version has not yet been enabled for Activity Tracking"
                                    delegate:nil
                           cancelButtonTitle:@"Okay"
                           otherButtonTitles:nil] show];
+    }
+}
+
+- (void)startDownload
+{
+    if (self.differentialSummedRMS) {
+        [[[self.differentialSummedRMS downloadLogAndStopLoggingAsync:NO progressHandler:^(float number) {
+            [self.delegate downloadDidUpdateProgress:number];
+        }] success:^(id  _Nonnull array) {
+            for (MBLRMSAccelerometerData *data in array) {
+                NSLog(@"Activity added: %@", data);
+                [self.delegate downloadDidRecieveEntry:[[LogEntry alloc] initWithTotalRMS:[NSNumber numberWithFloat:data.rms] timestamp:data.timestamp]];
+            }
+            [self.delegate downloadCompleteWithError:nil];
+        }] failure:^(NSError * _Nonnull error) {
+            [self.delegate downloadCompleteWithError:error];
+        }];
+    }
+    if (self.stepEvent) {
+        [[[self.stepEvent downloadLogAndStopLoggingAsync:NO progressHandler:^(float number) {
+            [self.delegate downloadDidUpdateProgress:number];
+        }] success:^(id  _Nonnull array) {
+            for (MBLNumericData *steps in array) {
+                NSLog(@"Steps added: %@", steps);
+                [self.delegate downloadDidRecieveEntry:[[LogEntry alloc] initWithSteps:steps.value.intValue timestamp:steps.timestamp]];
+            }
+            [self.delegate downloadCompleteWithError:nil];
+        }] failure:^(NSError * _Nonnull error) {
+            [self.delegate downloadCompleteWithError:error];
+        }];
     }
 }
 

@@ -34,7 +34,18 @@
  */
 
 #import <MetaWear/MetaWear.h>
+@class LogEntry;
+
+@protocol DeviceDelegate <NSObject>
+- (void)downloadDidUpdateProgress:(float)number;
+- (void)downloadDidRecieveEntry:(LogEntry *)entry;
+- (void)downloadCompleteWithError:(NSError *)error;
+@end
 
 @interface DeviceConfiguration : NSObject <MBLRestorable>
-@property (nonatomic, strong) MBLEvent *differentialSummedRMS;
+@property (nonatomic, weak) id<DeviceDelegate> delegate;
+
+- (void)startDownload;
 @end
+
+

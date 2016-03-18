@@ -45,4 +45,5 @@
 @property (nonatomic, readonly) NSString *valueText;
 
 - (instancetype)initWithTotalRMS:(NSNumber *)totalRMS timestamp:(NSDate *)timestamp;
+- (instancetype)initWithSteps:(int)steps timestamp:(NSDate *)timestamp;
 @end

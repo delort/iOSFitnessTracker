@@ -35,6 +35,8 @@
 
 #import <MetaWear/MBLDataSample.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Container for a single accelerometer sensor reading
  */
@@ -43,28 +45,21 @@
 /**
  Acceleration along X axis in G's
  */
-@property (nonatomic, readonly) float x;
+@property (nonatomic, readonly) double x;
 /**
  Acceleration along Y axis in G's
  */
-@property (nonatomic, readonly) float y;
+@property (nonatomic, readonly) double y;
 /**
  Acceleration along Z axis in G's
  */
-@property (nonatomic, readonly) float z;
+@property (nonatomic, readonly) double z;
 
 /**
  RMS value of x, y, and z in G's
  */
-@property (nonatomic, readonly) float RMS;
-
-///----------------------------------
-/// @name Deprecated Properties
-///----------------------------------
-
-/**
- @deprecated Use timestamp property instead
- */
-@property (nonatomic, readonly) NSTimeInterval intervalSinceCaptureBegan DEPRECATED_ATTRIBUTE;
+@property (nonatomic, readonly) double RMS;
 
 @end
+
+NS_ASSUME_NONNULL_END

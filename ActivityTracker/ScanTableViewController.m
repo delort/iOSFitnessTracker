@@ -94,7 +94,7 @@
     self.selected = self.devices[indexPath.row];
     [self.selected connectWithHandler:^(NSError *error) {
         if (!error) {
-            [self.selected.led flashLEDColor:[UIColor greenColor] withIntensity:0.75];
+            [self.selected.led flashLEDColorAsync:[UIColor greenColor] withIntensity:0.75];
             [hud hide:YES];
             [[[UIAlertView alloc] initWithTitle:@"Pair Device"
                                         message:@"Do you see a blinking green LED on the MetaWear?"
@@ -112,7 +112,7 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    [self.selected.led setLEDOn:NO withOptions:1];
+    [self.selected.led setLEDOnAsync:NO withOptions:1];
     if (buttonIndex == 1) {
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         hud.labelText = @"Programming...";

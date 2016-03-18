@@ -35,6 +35,8 @@
 
 #import <MetaWear/MBLDataSample.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Container for accelerometer RMS data
  */
@@ -42,5 +44,7 @@
 /**
  RMS value of x, y, and z in G's
  */
-@property (nonatomic, readonly) float rms;
+@property (nonatomic, readonly) double rms;
 @end
+
+NS_ASSUME_NONNULL_END

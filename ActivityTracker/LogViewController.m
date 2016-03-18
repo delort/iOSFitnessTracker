@@ -44,7 +44,7 @@
 
 #import "MBProgressHUD.h"
 
-@interface LogViewController () <JBBarChartViewDataSource, JBBarChartViewDelegate>
+@interface LogViewController () <JBBarChartViewDataSource, JBBarChartViewDelegate, DeviceDelegate>
 @property (weak, nonatomic) IBOutlet JBChartHeaderView *headerView;
 @property (weak, nonatomic) IBOutlet JBBarChartView *barChartView;
 @property (weak, nonatomic) IBOutlet JBChartInformationView *informationView;
@@ -145,7 +145,7 @@ static NSInteger const StepsPerMile = 2000;
 
 - (void)updateInterface
 {
-    [[MBLMetaWearManager sharedManager] retrieveSavedMetaWearsWithHandler:^(NSArray *array) {
+    [[[MBLMetaWearManager sharedManager] retrieveSavedMetaWearsAsync] success:^(NSArray<MBLMetaWear *> * _Nonnull array) {
         if (array.count) {
             self.device = array[0];
             self.statusLabel.text = @"Logging...";
@@ -195,35 +195,42 @@ static NSInteger const StepsPerMile = 2000;
         self.statusLabel.text = @"Syncing...";
         
         DeviceConfiguration *configuration = self.device.configuration;
-        [configuration.differentialSummedRMS downloadLogAndStopLogging:NO handler:^(NSArray *array, NSError *error)  {
-            if (error) {
-                [[[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil] show];
-            } else {
-                for (MBLRMSAccelerometerData *data in array) {
-                    NSLog(@"Activity added: %@", data);
-                        [self.logData addObject:[[LogEntry alloc] initWithTotalRMS:[NSNumber numberWithFloat:data.rms] timestamp:data.timestamp]];
-                        if (self.logData.count > BarChartViewControllerNumBars) {
-                            [self.logData removeObjectAtIndex:0];
-                        }
-                    }
-                }
-                [NSKeyedArchiver archiveRootObject:self.logData toFile:self.logFilename];
-
-                if (!self.doingReset) {
-                    [self updateHeader];
-                    [self.barChartView reloadData];
-                } else {
-                    self.doingReset = NO;
-                    [self clearLogPressed:nil];
-                }
-                self.progressBar.hidden = YES;
-                self.statusLabel.text = @"Logging...";
-            // We have our data so get outta here
-            [self.device disconnectWithHandler:nil];
-        } progressHandler:^(float number, NSError *error) {
-            [self.progressBar setProgress:number animated:YES];
-        }];
+        configuration.delegate = self;
+        [configuration startDownload];
     }];
+}
+
+- (void)downloadDidUpdateProgress:(float)number
+{
+    [self.progressBar setProgress:number animated:YES];
+}
+
+- (void)downloadDidRecieveEntry:(LogEntry *)entry
+{
+    [self.logData addObject:entry];
+    if (self.logData.count > BarChartViewControllerNumBars) {
+        [self.logData removeObjectAtIndex:0];
+    }
+}
+
+- (void)downloadCompleteWithError:(NSError *)error
+{
+    if (error) {
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil] show];
+    }
+    [NSKeyedArchiver archiveRootObject:self.logData toFile:self.logFilename];
+    
+    if (!self.doingReset) {
+        [self updateHeader];
+        [self.barChartView reloadData];
+    } else {
+        self.doingReset = NO;
+        [self clearLogPressed:nil];
+    }
+    self.progressBar.hidden = YES;
+    self.statusLabel.text = @"Logging...";
+    // We have our data so get outta here
+    [self.device disconnectWithHandler:nil];
 }
 
 - (IBAction)switchChanged:(id)sender

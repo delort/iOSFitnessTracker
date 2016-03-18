@@ -35,10 +35,27 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Generic base class for data coming from the MetaWear
  */
 @interface MBLDataSample : NSObject
-@property (nonatomic, readonly, nonnull) NSDate *timestamp;
+
+/*
+ Date/Time on which this sample was taken
+ */
+@property (nonatomic, readonly) NSDate *timestamp;
+/*
+ Raw data of the sample (if avaliable)
+ */
 @property (nonatomic, readonly, nullable) NSData *data;
+
+/*
+ A standardized CSV, new-line terminated representation of the sample
+ */
+@property (nonatomic, readonly, nullable) NSString *csvRepresentation;
+
 @end
+
+NS_ASSUME_NONNULL_END

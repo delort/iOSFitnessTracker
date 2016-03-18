@@ -37,8 +37,10 @@
 #import <MetaWear/MBLEvent.h>
 #import <MetaWear/MBLModule.h>
 #import <MetaWear/MBLExternalThermistor.h>
-
+@class MBLNumericData;
 @class MBLMetaWear;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  Interface to the on-chip and external thermistor temperature sensors
@@ -48,10 +50,10 @@
 /**
  Array of MBLData (or derived class) objects corresponding to the different
  temperature sensors available on this particular MetaWear. Event callbacks
- will be provided an MBLNumericData object whose float value will be
+ will be provided an MBLNumericData object whose double value will be
  degrees Celsius.
  */
-@property (nonatomic, readonly, nonnull) NSArray *channels;
+@property (nonatomic, readonly) NSArray<MBLData<MBLNumericData *> *> *channels;
 
 ///----------------------------------
 /// @name Convenient Assessors - also available via channels[N]
@@ -60,115 +62,28 @@
 /**
  Data representing the current temperate of the internal (on-die) sensor.
  This is guaranteed to always be available (equal to channels[0]).
- Event callbacks will be provided an MBLNumericData object whose float 
+ Event callbacks will be provided an MBLNumericData object whose double 
  value will be degrees Celsius.
  */
-@property (nonatomic, readonly, nonnull) MBLData *internal;
+@property (nonatomic, readonly) MBLData<MBLNumericData *> *onDieThermistor;
+@property (nonatomic, readonly) MBLData<MBLNumericData *> *internal DEPRECATED_MSG_ATTRIBUTE("Use onDieThermistor instead");
 
 /**
  Data representing the current temperate of the external thermistor, if
  equiped. This is a thermistor that you connect manually, so you need
  to setup readPin and enablePin on the MBLExternalThermistor object.
- Event callbacks will be provided an MBLNumericData object whose float
+ Event callbacks will be provided an MBLNumericData object whose double
  value will be degrees Celsius.
  */
-@property (nonatomic, readonly, nullable) MBLExternalThermistor *externalThermistor;
+@property (nonatomic, readonly, nullable) MBLExternalThermistor<MBLNumericData *> *externalThermistor;
 
 /**
  Data representing the current temperate of the on-board thermistor, if
  equiped. Event callbacks will be provided an MBLNumericData object whose
- float value will be degrees Celsius.
+ double value will be degrees Celsius.
  */
-@property (nonatomic, readonly, nullable) MBLData *onboardThermistor;
-
-
-
-///----------------------------------
-/// @name Deprecated Properties
-///----------------------------------
-
-/**
- @deprecated To simpliy use with filters, all temperature values will be in Celsius
- */
-DEPRECATED_MSG_ATTRIBUTE("To simpliy use with filters, all temperature values will be in Celsius")
-typedef NS_ENUM(uint8_t, MBLTemperatureUnit) {
-    MBLTemperatureUnitCelsius DEPRECATED_MSG_ATTRIBUTE("To simpliy use with filters, all temperature values will be in Celsius"),
-    MBLTemperatureUnitFahrenheit DEPRECATED_MSG_ATTRIBUTE("To simpliy use with filters, all temperature values will be in Celsius")
-};
-
-/**
- @deprecated use internal or externalThermistor properties
- */
-DEPRECATED_MSG_ATTRIBUTE("Use internal or externalThermistor properties")
-typedef NS_ENUM(uint8_t, MBLTemperatureSource) {
-    MBLTemperatureSourceInternal DEPRECATED_MSG_ATTRIBUTE("Use internal or externalThermistor properties"),
-    MBLTemperatureSourceThermistor DEPRECATED_MSG_ATTRIBUTE("Use internal or externalThermistor properties")
-};
-
-
-/**
- @deprecated use internal or externalThermistor properties
- */
-@property (nonatomic) MBLTemperatureSource source DEPRECATED_MSG_ATTRIBUTE("Use internal or externalThermistor properties");
-/**
- @deprecated use externalThermistor.readPin
- */
-@property (nonatomic) uint8_t thermistorReadPin DEPRECATED_MSG_ATTRIBUTE("Use externalThermistor.readPin");
-/**
- @deprecated use externalThermistor.enablePin
- */
-@property (nonatomic) uint8_t thermistorEnablePin DEPRECATED_MSG_ATTRIBUTE("Use externalThermistor.enablePin");
-
-/**
- @deprecated use internal or externalThermistor properties
- */
-@property (nonatomic, readonly, nullable) MBLData *temperatureValue DEPRECATED_MSG_ATTRIBUTE("Use internal or externalThermistor properties");
-
-/**
- @deprecated To simpliy use with filters, all temperature values will be in Celsius
- */
-@property (nonatomic) MBLTemperatureUnit units DEPRECATED_MSG_ATTRIBUTE("To simpliy use with filters, all temperature values will be in Celsius");
-
-/**
- @deprecated use [temperatureValue periodicReadWithPeriod:] instead
- */
-@property (nonatomic) uint16_t samplePeriod DEPRECATED_MSG_ATTRIBUTE("Use [temperatureValue periodicReadWithPeriod:] instead");
-/**
- @deprecated use [[temperatureValue periodicReadWithPeriod:] changeOfEventByDelta:output:] instead
- */
-@property (nonatomic) float delta DEPRECATED_MSG_ATTRIBUTE("Use [[temperatureValue periodicReadWithPeriod:] changeOfEventByDelta:output:] instead");
-/**
- @deprecated use [[temperatureValue periodicReadWithPeriod:] changeOfEventAcrossThreshold:hysteresis:output:] instead
- */
-@property (nonatomic) float upperThreshold DEPRECATED_MSG_ATTRIBUTE("Use [[temperatureValue periodicReadWithPeriod:] changeOfEventAcrossThreshold:hysteresis:output:] instead");
-/**
- @deprecated use [[temperatureValue periodicReadWithPeriod:] changeOfEventAcrossThreshold:hysteresis:output:] instead
- */
-@property (nonatomic) float lowerThreshold DEPRECATED_MSG_ATTRIBUTE("Use [[temperatureValue periodicReadWithPeriod:] changeOfEventAcrossThreshold:hysteresis:output:] instead");
-
-
-///----------------------------------
-/// @name Deprecated Methods
-///----------------------------------
-
-/**
- @deprecated use [temperatureValue readWithHandler:] instead
- */
-- (void)readTemperatureWithHandler:(nonnull MBLDecimalNumberHandler)handler DEPRECATED_MSG_ATTRIBUTE("Use [temperatureValue readWithHandler:] instead");
-
-/**
- @deprecated use [temperatureValue periodicReadWithPeriod:] instead
- */
-@property (nonatomic, readonly, nullable) MBLEvent *dataReadyEvent DEPRECATED_MSG_ATTRIBUTE("Use [temperatureValue periodicReadWithPeriod:] instead");;
-
-/**
- @deprecated use [[temperatureValue periodicReadWithPeriod:] changeOfEventByDelta:output:] instead
- */
-@property (nonatomic, readonly, nullable) MBLEvent *changeEvent DEPRECATED_MSG_ATTRIBUTE("Use [[temperatureValue periodicReadWithPeriod:] changeOfEventByDelta:output:] instead");
-
-/**
- @deprecated use [[temperatureValue periodicReadWithPeriod:] changeOfEventAcrossThreshold:hysteresis:output:] instead
- */
-@property (nonatomic, readonly, nullable) MBLEvent *thresholdEvent DEPRECATED_MSG_ATTRIBUTE("Use [[temperatureValue periodicReadWithPeriod:] changeOfEventAcrossThreshold:hysteresis:output:] instead");
+@property (nonatomic, readonly, nullable) MBLData<MBLNumericData *> *onboardThermistor;
 
 @end
+
+NS_ASSUME_NONNULL_END

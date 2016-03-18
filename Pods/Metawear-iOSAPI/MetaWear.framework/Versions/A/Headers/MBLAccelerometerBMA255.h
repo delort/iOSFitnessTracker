@@ -1,9 +1,9 @@
 /**
- * MBLLogEntry.h
+ * MBLAccelerometerBMA255.h
  * MetaWear
  *
- * Created by Stephen Schiffli on 9/23/14.
- * Copyright 2014-2015 MbientLab Inc. All rights reserved.
+ * Created by Stephen Schiffli on 2/29/16.
+ * Copyright 2016 MbientLab Inc. All rights reserved.
  *
  * IMPORTANT: Your use of this Software is limited to those specific rights
  * granted under the terms of a software license agreement between the user who
@@ -33,13 +33,22 @@
  * contact MbientLab via email: hello@mbientlab.com
  */
 
-#import <Foundation/Foundation.h>
+#import <MetaWear/MBLAccelerometerBosch.h>
+@class MBLAccelerometerBMA255MotionEvent;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
- Generic base class for data coming from the MetaWear log
+ Interface to a BMA25 accelerometer
  */
-DEPRECATED_MSG_ATTRIBUTE("This was renamed to MBLDataSample, as it's used as a base class for logging and notifications now")
-@interface MBLLogEntry : NSObject
-@property (nonatomic, readonly) NSDate *timestamp;
-@property (nonatomic, readonly) NSData *data;
+@interface MBLAccelerometerBMA255 : MBLAccelerometerBosch
+
+/**
+ Event representing a motion (change of acceleration) event.
+ Event callbacks will be provided an empty MBLDataSample object
+ */
+@property (nonatomic, readonly) MBLAccelerometerBMA255MotionEvent *motionEvent;
+
 @end
+
+NS_ASSUME_NONNULL_END
