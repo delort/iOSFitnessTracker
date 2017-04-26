@@ -7,248 +7,176 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3264076B6EE211A5A3FFAD51 /* libPods-ActivityTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2BA6ED9B638D76BD1DFCF90 /* libPods-ActivityTracker.a */; };
-		406CCC0A19EF73E5007C0217 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC0919EF73E5007C0217 /* main.m */; };
-		406CCC0D19EF73E5007C0217 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC0C19EF73E5007C0217 /* AppDelegate.m */; };
-		406CCC1319EF73E5007C0217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406CCC1119EF73E5007C0217 /* Main.storyboard */; };
-		406CCC1519EF73E5007C0217 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 406CCC1419EF73E5007C0217 /* Images.xcassets */; };
-		406CCC2419EF73E5007C0217 /* ActivityTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC2319EF73E5007C0217 /* ActivityTracker.m */; };
-		406CCC3E19F05A05007C0217 /* ScanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC3D19F05A05007C0217 /* ScanTableViewController.m */; };
-		406CCC4C19F09DB6007C0217 /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC4B19F09DB6007C0217 /* LogViewController.m */; };
-		40D29D5C1A29732C0048729C /* JBBarChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D491A29732C0048729C /* JBBarChartFooterView.m */; };
-		40D29D5D1A29732C0048729C /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D4B1A29732C0048729C /* JBBarChartView.m */; };
-		40D29D5E1A29732C0048729C /* JBBaseChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D4D1A29732C0048729C /* JBBaseChartViewController.m */; };
-		40D29D5F1A29732C0048729C /* JBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D4F1A29732C0048729C /* JBBaseViewController.m */; };
-		40D29D601A29732C0048729C /* JBChartHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D511A29732C0048729C /* JBChartHeaderView.m */; };
-		40D29D611A29732C0048729C /* JBChartInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D531A29732C0048729C /* JBChartInformationView.m */; };
-		40D29D621A29732C0048729C /* JBChartTooltipTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D551A29732C0048729C /* JBChartTooltipTipView.m */; };
-		40D29D631A29732C0048729C /* JBChartTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D571A29732C0048729C /* JBChartTooltipView.m */; };
-		40D29D641A29732C0048729C /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D591A29732C0048729C /* JBChartView.m */; };
-		40D29D651A29732C0048729C /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D5B1A29732C0048729C /* JBLineChartView.m */; };
-		40D29D681A297A040048729C /* LogEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D29D671A297A040048729C /* LogEntry.m */; };
-		40D303BC1A81A90A0072B487 /* DeviceConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 40D303BB1A81A90A0072B487 /* DeviceConfiguration.m */; };
-		D06E997D1A0B597E002B3672 /* icon-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E997B1A0B597E002B3672 /* icon-arrow.png */; };
-		D06E997E1A0B597E002B3672 /* icon-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E997C1A0B597E002B3672 /* icon-arrow@2x.png */; };
-		D079C4281A159A79001D6DDE /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D079C4271A159A79001D6DDE /* StartViewController.m */; };
-		D07BA17C1A0AD89F00C6CB14 /* BaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D07BA17B1A0AD89F00C6CB14 /* BaseNavViewController.m */; };
+		4016FCF61EAFF074003815CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4016FCF51EAFF074003815CF /* AppDelegate.swift */; };
+		4016FCFB1EAFF074003815CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4016FCF91EAFF074003815CF /* Main.storyboard */; };
+		4016FCFD1EAFF074003815CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4016FCFC1EAFF074003815CF /* Assets.xcassets */; };
+		4016FD4F1EAFF5AC003815CF /* ScanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4016FD4E1EAFF5AC003815CF /* ScanTableViewController.swift */; };
+		4016FD511EAFF684003815CF /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4016FD501EAFF684003815CF /* LogViewController.swift */; };
+		4016FD681EAFF949003815CF /* JBBarChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4016FD551EAFF949003815CF /* JBBarChartFooterView.m */; };
+		4016FD691EAFF949003815CF /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4016FD571EAFF949003815CF /* JBBarChartView.m */; };
+		4016FD6A1EAFF949003815CF /* JBBaseChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4016FD591EAFF949003815CF /* JBBaseChartViewController.m */; };
+		4016FD6B1EAFF949003815CF /* JBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4016FD5B1EAFF949003815CF /* JBBaseViewController.m */; };
+		4016FD6C1EAFF949003815CF /* JBChartHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4016FD5D1EAFF949003815CF /* JBChartHeaderView.m */; };
+		4016FD6D1EAFF949003815CF /* JBChartInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4016FD5F1EAFF949003815CF /* JBChartInformationView.m */; };
+		4016FD6E1EAFF949003815CF /* JBChartTooltipTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4016FD611EAFF949003815CF /* JBChartTooltipTipView.m */; };
+		4016FD6F1EAFF949003815CF /* JBChartTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4016FD631EAFF949003815CF /* JBChartTooltipView.m */; };
+		4016FD701EAFF949003815CF /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4016FD651EAFF949003815CF /* JBChartView.m */; };
+		4016FD711EAFF949003815CF /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4016FD671EAFF949003815CF /* JBLineChartView.m */; };
+		4016FD751EAFFA80003815CF /* DeviceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4016FD741EAFFA80003815CF /* DeviceConfiguration.swift */; };
+		4016FD771EAFFA8D003815CF /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4016FD761EAFFA8D003815CF /* LogEntry.swift */; };
+		4016FD791EAFFAA6003815CF /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4016FD781EAFFAA6003815CF /* StartViewController.swift */; };
+		4016FD7B1EB0EFB0003815CF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4016FD7A1EB0EFB0003815CF /* Constants.swift */; };
+		822DEF07A4F55A609203B51B /* Pods_ActivityTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C704DD9374F70C9B3A90535D /* Pods_ActivityTracker.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		406CCC1E19EF73E5007C0217 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 406CCBFC19EF73E5007C0217 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 406CCC0319EF73E5007C0217;
-			remoteInfo = ActivityTracker;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		05224752DBAF2C74551C78AA /* Pods-ActivityTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActivityTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-ActivityTracker/Pods-ActivityTracker.release.xcconfig"; sourceTree = "<group>"; };
-		406CCC0419EF73E5007C0217 /* ActivityTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		406CCC0819EF73E5007C0217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		406CCC0919EF73E5007C0217 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		406CCC0B19EF73E5007C0217 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		406CCC0C19EF73E5007C0217 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		406CCC1219EF73E5007C0217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		406CCC1419EF73E5007C0217 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		406CCC1D19EF73E5007C0217 /* ActivityTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActivityTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		406CCC2219EF73E5007C0217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		406CCC2319EF73E5007C0217 /* ActivityTracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityTracker.m; sourceTree = "<group>"; };
-		406CCC3C19F05A05007C0217 /* ScanTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanTableViewController.h; sourceTree = "<group>"; };
-		406CCC3D19F05A05007C0217 /* ScanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanTableViewController.m; sourceTree = "<group>"; };
-		406CCC4A19F09DB6007C0217 /* LogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogViewController.h; sourceTree = "<group>"; };
-		406CCC4B19F09DB6007C0217 /* LogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogViewController.m; sourceTree = "<group>"; };
-		40D29D481A29732C0048729C /* JBBarChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBBarChartFooterView.h; path = JBChartView/JBBarChartFooterView.h; sourceTree = SOURCE_ROOT; };
-		40D29D491A29732C0048729C /* JBBarChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBBarChartFooterView.m; path = JBChartView/JBBarChartFooterView.m; sourceTree = SOURCE_ROOT; };
-		40D29D4A1A29732C0048729C /* JBBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBBarChartView.h; path = JBChartView/JBBarChartView.h; sourceTree = SOURCE_ROOT; };
-		40D29D4B1A29732C0048729C /* JBBarChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBBarChartView.m; path = JBChartView/JBBarChartView.m; sourceTree = SOURCE_ROOT; };
-		40D29D4C1A29732C0048729C /* JBBaseChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBBaseChartViewController.h; path = JBChartView/JBBaseChartViewController.h; sourceTree = SOURCE_ROOT; };
-		40D29D4D1A29732C0048729C /* JBBaseChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBBaseChartViewController.m; path = JBChartView/JBBaseChartViewController.m; sourceTree = SOURCE_ROOT; };
-		40D29D4E1A29732C0048729C /* JBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBBaseViewController.h; path = JBChartView/JBBaseViewController.h; sourceTree = SOURCE_ROOT; };
-		40D29D4F1A29732C0048729C /* JBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBBaseViewController.m; path = JBChartView/JBBaseViewController.m; sourceTree = SOURCE_ROOT; };
-		40D29D501A29732C0048729C /* JBChartHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartHeaderView.h; path = JBChartView/JBChartHeaderView.h; sourceTree = SOURCE_ROOT; };
-		40D29D511A29732C0048729C /* JBChartHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartHeaderView.m; path = JBChartView/JBChartHeaderView.m; sourceTree = SOURCE_ROOT; };
-		40D29D521A29732C0048729C /* JBChartInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartInformationView.h; path = JBChartView/JBChartInformationView.h; sourceTree = SOURCE_ROOT; };
-		40D29D531A29732C0048729C /* JBChartInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartInformationView.m; path = JBChartView/JBChartInformationView.m; sourceTree = SOURCE_ROOT; };
-		40D29D541A29732C0048729C /* JBChartTooltipTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartTooltipTipView.h; path = JBChartView/JBChartTooltipTipView.h; sourceTree = SOURCE_ROOT; };
-		40D29D551A29732C0048729C /* JBChartTooltipTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartTooltipTipView.m; path = JBChartView/JBChartTooltipTipView.m; sourceTree = SOURCE_ROOT; };
-		40D29D561A29732C0048729C /* JBChartTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartTooltipView.h; path = JBChartView/JBChartTooltipView.h; sourceTree = SOURCE_ROOT; };
-		40D29D571A29732C0048729C /* JBChartTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartTooltipView.m; path = JBChartView/JBChartTooltipView.m; sourceTree = SOURCE_ROOT; };
-		40D29D581A29732C0048729C /* JBChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartView.h; path = JBChartView/JBChartView.h; sourceTree = SOURCE_ROOT; };
-		40D29D591A29732C0048729C /* JBChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartView.m; path = JBChartView/JBChartView.m; sourceTree = SOURCE_ROOT; };
-		40D29D5A1A29732C0048729C /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBLineChartView.h; path = JBChartView/JBLineChartView.h; sourceTree = SOURCE_ROOT; };
-		40D29D5B1A29732C0048729C /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBLineChartView.m; path = JBChartView/JBLineChartView.m; sourceTree = SOURCE_ROOT; };
-		40D29D661A297A040048729C /* LogEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogEntry.h; sourceTree = "<group>"; };
-		40D29D671A297A040048729C /* LogEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogEntry.m; sourceTree = "<group>"; };
-		40D303BA1A81A90A0072B487 /* DeviceConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceConfiguration.h; sourceTree = "<group>"; };
-		40D303BB1A81A90A0072B487 /* DeviceConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceConfiguration.m; sourceTree = "<group>"; };
-		D06E994A1A0AEE3C002B3672 /* ColorConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorConstants.h; sourceTree = "<group>"; };
-		D06E994B1A0AF008002B3672 /* ActivityTrackerPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityTrackerPrefixHeader.pch; sourceTree = "<group>"; };
-		D06E994C1A0AF65F002B3672 /* FontConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontConstants.h; sourceTree = "<group>"; };
-		D06E997B1A0B597E002B3672 /* icon-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow.png"; sourceTree = "<group>"; };
-		D06E997C1A0B597E002B3672 /* icon-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow@2x.png"; sourceTree = "<group>"; };
-		D079C4261A159A79001D6DDE /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
-		D079C4271A159A79001D6DDE /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
-		D07BA17A1A0AD89F00C6CB14 /* BaseNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavViewController.h; sourceTree = "<group>"; };
-		D07BA17B1A0AD89F00C6CB14 /* BaseNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavViewController.m; sourceTree = "<group>"; };
-		D2BA6ED9B638D76BD1DFCF90 /* libPods-ActivityTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ActivityTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E61C1B767ADD0E3FC8543591 /* Pods-ActivityTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActivityTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ActivityTracker/Pods-ActivityTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		33DE60113EE1B18CE678EA73 /* Pods-ActivityTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActivityTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-ActivityTracker/Pods-ActivityTracker.release.xcconfig"; sourceTree = "<group>"; };
+		4016FCF21EAFF074003815CF /* ActivityTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4016FCF51EAFF074003815CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4016FCFA1EAFF074003815CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4016FCFC1EAFF074003815CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4016FD011EAFF074003815CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4016FD4E1EAFF5AC003815CF /* ScanTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanTableViewController.swift; sourceTree = "<group>"; };
+		4016FD501EAFF684003815CF /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		4016FD531EAFF949003815CF /* ActivityTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActivityTracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		4016FD541EAFF949003815CF /* JBBarChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartFooterView.h; sourceTree = "<group>"; };
+		4016FD551EAFF949003815CF /* JBBarChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBarChartFooterView.m; sourceTree = "<group>"; };
+		4016FD561EAFF949003815CF /* JBBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartView.h; sourceTree = "<group>"; };
+		4016FD571EAFF949003815CF /* JBBarChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBarChartView.m; sourceTree = "<group>"; };
+		4016FD581EAFF949003815CF /* JBBaseChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBaseChartViewController.h; sourceTree = "<group>"; };
+		4016FD591EAFF949003815CF /* JBBaseChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBaseChartViewController.m; sourceTree = "<group>"; };
+		4016FD5A1EAFF949003815CF /* JBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBaseViewController.h; sourceTree = "<group>"; };
+		4016FD5B1EAFF949003815CF /* JBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBaseViewController.m; sourceTree = "<group>"; };
+		4016FD5C1EAFF949003815CF /* JBChartHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartHeaderView.h; sourceTree = "<group>"; };
+		4016FD5D1EAFF949003815CF /* JBChartHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartHeaderView.m; sourceTree = "<group>"; };
+		4016FD5E1EAFF949003815CF /* JBChartInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartInformationView.h; sourceTree = "<group>"; };
+		4016FD5F1EAFF949003815CF /* JBChartInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartInformationView.m; sourceTree = "<group>"; };
+		4016FD601EAFF949003815CF /* JBChartTooltipTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartTooltipTipView.h; sourceTree = "<group>"; };
+		4016FD611EAFF949003815CF /* JBChartTooltipTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartTooltipTipView.m; sourceTree = "<group>"; };
+		4016FD621EAFF949003815CF /* JBChartTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartTooltipView.h; sourceTree = "<group>"; };
+		4016FD631EAFF949003815CF /* JBChartTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartTooltipView.m; sourceTree = "<group>"; };
+		4016FD641EAFF949003815CF /* JBChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartView.h; sourceTree = "<group>"; };
+		4016FD651EAFF949003815CF /* JBChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartView.m; sourceTree = "<group>"; };
+		4016FD661EAFF949003815CF /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
+		4016FD671EAFF949003815CF /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
+		4016FD721EAFF99E003815CF /* ColorConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorConstants.h; sourceTree = "<group>"; };
+		4016FD731EAFF99E003815CF /* FontConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontConstants.h; sourceTree = "<group>"; };
+		4016FD741EAFFA80003815CF /* DeviceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceConfiguration.swift; sourceTree = "<group>"; };
+		4016FD761EAFFA8D003815CF /* LogEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogEntry.swift; sourceTree = "<group>"; };
+		4016FD781EAFFAA6003815CF /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		4016FD7A1EB0EFB0003815CF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		74A95614BAFCCE623A31F1C9 /* Pods-ActivityTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActivityTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ActivityTracker/Pods-ActivityTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		C704DD9374F70C9B3A90535D /* Pods_ActivityTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ActivityTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		406CCC0119EF73E5007C0217 /* Frameworks */ = {
+		4016FCEF1EAFF074003815CF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3264076B6EE211A5A3FFAD51 /* libPods-ActivityTracker.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		406CCC1A19EF73E5007C0217 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				822DEF07A4F55A609203B51B /* Pods_ActivityTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		406CCBFB19EF73E5007C0217 = {
+		16C674F889CB96FA75BC0BBA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				406CCC4D19F0AE55007C0217 /* JBChartView */,
-				406CCC0619EF73E5007C0217 /* ActivityTracker */,
-				406CCC2019EF73E5007C0217 /* ActivityTrackerTests */,
-				406CCC2D19EF73F6007C0217 /* Frameworks */,
-				406CCC0519EF73E5007C0217 /* Products */,
-				504D110BBE1BA451203CC2DB /* Pods */,
+				74A95614BAFCCE623A31F1C9 /* Pods-ActivityTracker.debug.xcconfig */,
+				33DE60113EE1B18CE678EA73 /* Pods-ActivityTracker.release.xcconfig */,
 			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		406CCC0519EF73E5007C0217 /* Products */ = {
+		35A8E13D3E981459CDC9D168 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				406CCC0419EF73E5007C0217 /* ActivityTracker.app */,
-				406CCC1D19EF73E5007C0217 /* ActivityTrackerTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		406CCC0619EF73E5007C0217 /* ActivityTracker */ = {
-			isa = PBXGroup;
-			children = (
-				D06E994A1A0AEE3C002B3672 /* ColorConstants.h */,
-				D06E994C1A0AF65F002B3672 /* FontConstants.h */,
-				40D29D661A297A040048729C /* LogEntry.h */,
-				40D29D671A297A040048729C /* LogEntry.m */,
-				40D303BA1A81A90A0072B487 /* DeviceConfiguration.h */,
-				40D303BB1A81A90A0072B487 /* DeviceConfiguration.m */,
-				406CCC0B19EF73E5007C0217 /* AppDelegate.h */,
-				406CCC0C19EF73E5007C0217 /* AppDelegate.m */,
-				D07BA17A1A0AD89F00C6CB14 /* BaseNavViewController.h */,
-				D07BA17B1A0AD89F00C6CB14 /* BaseNavViewController.m */,
-				406CCC3C19F05A05007C0217 /* ScanTableViewController.h */,
-				406CCC3D19F05A05007C0217 /* ScanTableViewController.m */,
-				406CCC4A19F09DB6007C0217 /* LogViewController.h */,
-				406CCC4B19F09DB6007C0217 /* LogViewController.m */,
-				D079C4261A159A79001D6DDE /* StartViewController.h */,
-				D079C4271A159A79001D6DDE /* StartViewController.m */,
-				406CCC1119EF73E5007C0217 /* Main.storyboard */,
-				406CCC1419EF73E5007C0217 /* Images.xcassets */,
-				406CCC0719EF73E5007C0217 /* Supporting Files */,
-			);
-			path = ActivityTracker;
-			sourceTree = "<group>";
-		};
-		406CCC0719EF73E5007C0217 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D06E997B1A0B597E002B3672 /* icon-arrow.png */,
-				D06E997C1A0B597E002B3672 /* icon-arrow@2x.png */,
-				406CCC0819EF73E5007C0217 /* Info.plist */,
-				406CCC0919EF73E5007C0217 /* main.m */,
-				D06E994B1A0AF008002B3672 /* ActivityTrackerPrefixHeader.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		406CCC2019EF73E5007C0217 /* ActivityTrackerTests */ = {
-			isa = PBXGroup;
-			children = (
-				406CCC2319EF73E5007C0217 /* ActivityTracker.m */,
-				406CCC2119EF73E5007C0217 /* Supporting Files */,
-			);
-			path = ActivityTrackerTests;
-			sourceTree = SOURCE_ROOT;
-		};
-		406CCC2119EF73E5007C0217 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				406CCC2219EF73E5007C0217 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		406CCC2D19EF73F6007C0217 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D2BA6ED9B638D76BD1DFCF90 /* libPods-ActivityTracker.a */,
+				C704DD9374F70C9B3A90535D /* Pods_ActivityTracker.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		406CCC4D19F0AE55007C0217 /* JBChartView */ = {
+		4016FCE91EAFF074003815CF = {
 			isa = PBXGroup;
 			children = (
-				40D29D481A29732C0048729C /* JBBarChartFooterView.h */,
-				40D29D491A29732C0048729C /* JBBarChartFooterView.m */,
-				40D29D4A1A29732C0048729C /* JBBarChartView.h */,
-				40D29D4B1A29732C0048729C /* JBBarChartView.m */,
-				40D29D4C1A29732C0048729C /* JBBaseChartViewController.h */,
-				40D29D4D1A29732C0048729C /* JBBaseChartViewController.m */,
-				40D29D4E1A29732C0048729C /* JBBaseViewController.h */,
-				40D29D4F1A29732C0048729C /* JBBaseViewController.m */,
-				40D29D501A29732C0048729C /* JBChartHeaderView.h */,
-				40D29D511A29732C0048729C /* JBChartHeaderView.m */,
-				40D29D521A29732C0048729C /* JBChartInformationView.h */,
-				40D29D531A29732C0048729C /* JBChartInformationView.m */,
-				40D29D541A29732C0048729C /* JBChartTooltipTipView.h */,
-				40D29D551A29732C0048729C /* JBChartTooltipTipView.m */,
-				40D29D561A29732C0048729C /* JBChartTooltipView.h */,
-				40D29D571A29732C0048729C /* JBChartTooltipView.m */,
-				40D29D581A29732C0048729C /* JBChartView.h */,
-				40D29D591A29732C0048729C /* JBChartView.m */,
-				40D29D5A1A29732C0048729C /* JBLineChartView.h */,
-				40D29D5B1A29732C0048729C /* JBLineChartView.m */,
+				4016FD521EAFF93B003815CF /* JBChartView */,
+				4016FCF41EAFF074003815CF /* ActivityTracker */,
+				4016FCF31EAFF074003815CF /* Products */,
+				16C674F889CB96FA75BC0BBA /* Pods */,
+				35A8E13D3E981459CDC9D168 /* Frameworks */,
 			);
-			name = JBChartView;
-			path = Classes;
 			sourceTree = "<group>";
 		};
-		504D110BBE1BA451203CC2DB /* Pods */ = {
+		4016FCF31EAFF074003815CF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E61C1B767ADD0E3FC8543591 /* Pods-ActivityTracker.debug.xcconfig */,
-				05224752DBAF2C74551C78AA /* Pods-ActivityTracker.release.xcconfig */,
+				4016FCF21EAFF074003815CF /* ActivityTracker.app */,
 			);
-			name = Pods;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4016FCF41EAFF074003815CF /* ActivityTracker */ = {
+			isa = PBXGroup;
+			children = (
+				4016FD7A1EB0EFB0003815CF /* Constants.swift */,
+				4016FCF51EAFF074003815CF /* AppDelegate.swift */,
+				4016FD741EAFFA80003815CF /* DeviceConfiguration.swift */,
+				4016FD761EAFFA8D003815CF /* LogEntry.swift */,
+				4016FD781EAFFAA6003815CF /* StartViewController.swift */,
+				4016FD501EAFF684003815CF /* LogViewController.swift */,
+				4016FD4E1EAFF5AC003815CF /* ScanTableViewController.swift */,
+				4016FCF91EAFF074003815CF /* Main.storyboard */,
+				4016FCFC1EAFF074003815CF /* Assets.xcassets */,
+				4016FD011EAFF074003815CF /* Info.plist */,
+			);
+			path = ActivityTracker;
+			sourceTree = "<group>";
+		};
+		4016FD521EAFF93B003815CF /* JBChartView */ = {
+			isa = PBXGroup;
+			children = (
+				4016FD541EAFF949003815CF /* JBBarChartFooterView.h */,
+				4016FD551EAFF949003815CF /* JBBarChartFooterView.m */,
+				4016FD561EAFF949003815CF /* JBBarChartView.h */,
+				4016FD571EAFF949003815CF /* JBBarChartView.m */,
+				4016FD581EAFF949003815CF /* JBBaseChartViewController.h */,
+				4016FD591EAFF949003815CF /* JBBaseChartViewController.m */,
+				4016FD5A1EAFF949003815CF /* JBBaseViewController.h */,
+				4016FD5B1EAFF949003815CF /* JBBaseViewController.m */,
+				4016FD5C1EAFF949003815CF /* JBChartHeaderView.h */,
+				4016FD5D1EAFF949003815CF /* JBChartHeaderView.m */,
+				4016FD5E1EAFF949003815CF /* JBChartInformationView.h */,
+				4016FD5F1EAFF949003815CF /* JBChartInformationView.m */,
+				4016FD601EAFF949003815CF /* JBChartTooltipTipView.h */,
+				4016FD611EAFF949003815CF /* JBChartTooltipTipView.m */,
+				4016FD621EAFF949003815CF /* JBChartTooltipView.h */,
+				4016FD631EAFF949003815CF /* JBChartTooltipView.m */,
+				4016FD641EAFF949003815CF /* JBChartView.h */,
+				4016FD651EAFF949003815CF /* JBChartView.m */,
+				4016FD661EAFF949003815CF /* JBLineChartView.h */,
+				4016FD671EAFF949003815CF /* JBLineChartView.m */,
+				4016FD721EAFF99E003815CF /* ColorConstants.h */,
+				4016FD731EAFF99E003815CF /* FontConstants.h */,
+				4016FD531EAFF949003815CF /* ActivityTracker-Bridging-Header.h */,
+			);
+			path = JBChartView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		406CCC0319EF73E5007C0217 /* ActivityTracker */ = {
+		4016FCF11EAFF074003815CF /* ActivityTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 406CCC2719EF73E5007C0217 /* Build configuration list for PBXNativeTarget "ActivityTracker" */;
+			buildConfigurationList = 4016FD041EAFF074003815CF /* Build configuration list for PBXNativeTarget "ActivityTracker" */;
 			buildPhases = (
-				FEF2C6FB0074EBE6A6121F97 /* Check Pods Manifest.lock */,
-				406CCC0019EF73E5007C0217 /* Sources */,
-				406CCC0119EF73E5007C0217 /* Frameworks */,
-				406CCC0219EF73E5007C0217 /* Resources */,
-				98E7BD4867C0A4DBB1DD74F4 /* Copy Pods Resources */,
-				0EBA0094BF314A6203AB39E8 /* Embed Pods Frameworks */,
+				CBE7FE4D8005DF5C4C3FDA71 /* [CP] Check Pods Manifest.lock */,
+				4016FCEE1EAFF074003815CF /* Sources */,
+				4016FCEF1EAFF074003815CF /* Frameworks */,
+				4016FCF01EAFF074003815CF /* Resources */,
+				08C38F204CBC5BD3D7C39D02 /* [CP] Embed Pods Frameworks */,
+				C9506C6430879DBD734E6599 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,50 +184,33 @@
 			);
 			name = ActivityTracker;
 			productName = ActivityTracker;
-			productReference = 406CCC0419EF73E5007C0217 /* ActivityTracker.app */;
+			productReference = 4016FCF21EAFF074003815CF /* ActivityTracker.app */;
 			productType = "com.apple.product-type.application";
-		};
-		406CCC1C19EF73E5007C0217 /* ActivityTrackerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 406CCC2A19EF73E5007C0217 /* Build configuration list for PBXNativeTarget "ActivityTrackerTests" */;
-			buildPhases = (
-				406CCC1919EF73E5007C0217 /* Sources */,
-				406CCC1A19EF73E5007C0217 /* Frameworks */,
-				406CCC1B19EF73E5007C0217 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				406CCC1F19EF73E5007C0217 /* PBXTargetDependency */,
-			);
-			name = ActivityTrackerTests;
-			productName = ActivityTrackerTests;
-			productReference = 406CCC1D19EF73E5007C0217 /* ActivityTrackerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		406CCBFC19EF73E5007C0217 /* Project object */ = {
+		4016FCEA1EAFF074003815CF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = "MbientLab Inc.";
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "MBIENTLAB Inc.";
 				TargetAttributes = {
-					406CCC0319EF73E5007C0217 = {
-						CreatedOnToolsVersion = 6.0.1;
+					4016FCF11EAFF074003815CF = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = S2273LZ6GL;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
 						};
 					};
-					406CCC1C19EF73E5007C0217 = {
-						CreatedOnToolsVersion = 6.0.1;
-					};
 				};
 			};
-			buildConfigurationList = 406CCBFF19EF73E5007C0217 /* Build configuration list for PBXProject "ActivityTracker" */;
+			buildConfigurationList = 4016FCED1EAFF074003815CF /* Build configuration list for PBXProject "ActivityTracker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -307,47 +218,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 406CCBFB19EF73E5007C0217;
-			productRefGroup = 406CCC0519EF73E5007C0217 /* Products */;
+			mainGroup = 4016FCE91EAFF074003815CF;
+			productRefGroup = 4016FCF31EAFF074003815CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				406CCC0319EF73E5007C0217 /* ActivityTracker */,
-				406CCC1C19EF73E5007C0217 /* ActivityTrackerTests */,
+				4016FCF11EAFF074003815CF /* ActivityTracker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		406CCC0219EF73E5007C0217 /* Resources */ = {
+		4016FCF01EAFF074003815CF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				406CCC1319EF73E5007C0217 /* Main.storyboard in Resources */,
-				D06E997D1A0B597E002B3672 /* icon-arrow.png in Resources */,
-				406CCC1519EF73E5007C0217 /* Images.xcassets in Resources */,
-				D06E997E1A0B597E002B3672 /* icon-arrow@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		406CCC1B19EF73E5007C0217 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				4016FCFD1EAFF074003815CF /* Assets.xcassets in Resources */,
+				4016FCFB1EAFF074003815CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0EBA0094BF314A6203AB39E8 /* Embed Pods Frameworks */ = {
+		08C38F204CBC5BD3D7C39D02 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,14 +256,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ActivityTracker/Pods-ActivityTracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		98E7BD4867C0A4DBB1DD74F4 /* Copy Pods Resources */ = {
+		C9506C6430879DBD734E6599 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,72 +271,55 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ActivityTracker/Pods-ActivityTracker-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FEF2C6FB0074EBE6A6121F97 /* Check Pods Manifest.lock */ = {
+		CBE7FE4D8005DF5C4C3FDA71 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		406CCC0019EF73E5007C0217 /* Sources */ = {
+		4016FCEE1EAFF074003815CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40D29D601A29732C0048729C /* JBChartHeaderView.m in Sources */,
-				40D29D641A29732C0048729C /* JBChartView.m in Sources */,
-				D07BA17C1A0AD89F00C6CB14 /* BaseNavViewController.m in Sources */,
-				40D29D621A29732C0048729C /* JBChartTooltipTipView.m in Sources */,
-				40D29D5E1A29732C0048729C /* JBBaseChartViewController.m in Sources */,
-				406CCC3E19F05A05007C0217 /* ScanTableViewController.m in Sources */,
-				40D29D5F1A29732C0048729C /* JBBaseViewController.m in Sources */,
-				406CCC0D19EF73E5007C0217 /* AppDelegate.m in Sources */,
-				406CCC0A19EF73E5007C0217 /* main.m in Sources */,
-				406CCC4C19F09DB6007C0217 /* LogViewController.m in Sources */,
-				40D29D651A29732C0048729C /* JBLineChartView.m in Sources */,
-				40D29D631A29732C0048729C /* JBChartTooltipView.m in Sources */,
-				40D29D611A29732C0048729C /* JBChartInformationView.m in Sources */,
-				40D29D5D1A29732C0048729C /* JBBarChartView.m in Sources */,
-				40D29D681A297A040048729C /* LogEntry.m in Sources */,
-				40D29D5C1A29732C0048729C /* JBBarChartFooterView.m in Sources */,
-				40D303BC1A81A90A0072B487 /* DeviceConfiguration.m in Sources */,
-				D079C4281A159A79001D6DDE /* StartViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		406CCC1919EF73E5007C0217 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				406CCC2419EF73E5007C0217 /* ActivityTracker.m in Sources */,
+				4016FD6D1EAFF949003815CF /* JBChartInformationView.m in Sources */,
+				4016FD7B1EB0EFB0003815CF /* Constants.swift in Sources */,
+				4016FD791EAFFAA6003815CF /* StartViewController.swift in Sources */,
+				4016FD681EAFF949003815CF /* JBBarChartFooterView.m in Sources */,
+				4016FCF61EAFF074003815CF /* AppDelegate.swift in Sources */,
+				4016FD6C1EAFF949003815CF /* JBChartHeaderView.m in Sources */,
+				4016FD701EAFF949003815CF /* JBChartView.m in Sources */,
+				4016FD691EAFF949003815CF /* JBBarChartView.m in Sources */,
+				4016FD6A1EAFF949003815CF /* JBBaseChartViewController.m in Sources */,
+				4016FD6F1EAFF949003815CF /* JBChartTooltipView.m in Sources */,
+				4016FD711EAFF949003815CF /* JBLineChartView.m in Sources */,
+				4016FD4F1EAFF5AC003815CF /* ScanTableViewController.swift in Sources */,
+				4016FD751EAFFA80003815CF /* DeviceConfiguration.swift in Sources */,
+				4016FD511EAFF684003815CF /* LogViewController.swift in Sources */,
+				4016FD771EAFFA8D003815CF /* LogEntry.swift in Sources */,
+				4016FD6E1EAFF949003815CF /* JBChartTooltipTipView.m in Sources */,
+				4016FD6B1EAFF949003815CF /* JBBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		406CCC1F19EF73E5007C0217 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 406CCC0319EF73E5007C0217 /* ActivityTracker */;
-			targetProxy = 406CCC1E19EF73E5007C0217 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		406CCC1119EF73E5007C0217 /* Main.storyboard */ = {
+		4016FCF91EAFF074003815CF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				406CCC1219EF73E5007C0217 /* Base */,
+				4016FCFA1EAFF074003815CF /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -443,10 +327,12 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		406CCC2519EF73E5007C0217 /* Debug */ = {
+		4016FD021EAFF074003815CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -454,41 +340,49 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		406CCC2619EF73E5007C0217 /* Release */ = {
+		4016FD031EAFF074003815CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -496,141 +390,95 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		406CCC2819EF73E5007C0217 /* Debug */ = {
+		4016FD051EAFF074003815CF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E61C1B767ADD0E3FC8543591 /* Pods-ActivityTracker.debug.xcconfig */;
+			baseConfigurationReference = 74A95614BAFCCE623A31F1C9 /* Pods-ActivityTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				GCC_PREFIX_HEADER = ActivityTracker/ActivityTrackerPrefixHeader.pch;
-				INFOPLIST_FILE = "$(SRCROOT)/ActivityTracker/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = S2273LZ6GL;
+				INFOPLIST_FILE = ActivityTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mbientlab.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = ActivityTracker;
-				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
-				VALID_ARCHS = "arm64 armv7 armv7s";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mbientlab.ActivityTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JBChartView/ActivityTracker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		406CCC2919EF73E5007C0217 /* Release */ = {
+		4016FD061EAFF074003815CF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05224752DBAF2C74551C78AA /* Pods-ActivityTracker.release.xcconfig */;
+			baseConfigurationReference = 33DE60113EE1B18CE678EA73 /* Pods-ActivityTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				GCC_PREFIX_HEADER = ActivityTracker/ActivityTrackerPrefixHeader.pch;
-				INFOPLIST_FILE = "$(SRCROOT)/ActivityTracker/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = S2273LZ6GL;
+				INFOPLIST_FILE = ActivityTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mbientlab.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = ActivityTracker;
-				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
-				VALID_ARCHS = "arm64 armv7 armv7s";
-			};
-			name = Release;
-		};
-		406CCC2B19EF73E5007C0217 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ActivityTrackerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mbientlab.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = ActivityTrackerTests;
-			};
-			name = Debug;
-		};
-		406CCC2C19EF73E5007C0217 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ActivityTrackerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mbientlab.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = ActivityTrackerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mbientlab.ActivityTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JBChartView/ActivityTracker-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		406CCBFF19EF73E5007C0217 /* Build configuration list for PBXProject "ActivityTracker" */ = {
+		4016FCED1EAFF074003815CF /* Build configuration list for PBXProject "ActivityTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				406CCC2519EF73E5007C0217 /* Debug */,
-				406CCC2619EF73E5007C0217 /* Release */,
+				4016FD021EAFF074003815CF /* Debug */,
+				4016FD031EAFF074003815CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		406CCC2719EF73E5007C0217 /* Build configuration list for PBXNativeTarget "ActivityTracker" */ = {
+		4016FD041EAFF074003815CF /* Build configuration list for PBXNativeTarget "ActivityTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				406CCC2819EF73E5007C0217 /* Debug */,
-				406CCC2919EF73E5007C0217 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		406CCC2A19EF73E5007C0217 /* Build configuration list for PBXNativeTarget "ActivityTrackerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				406CCC2B19EF73E5007C0217 /* Debug */,
-				406CCC2C19EF73E5007C0217 /* Release */,
+				4016FD051EAFF074003815CF /* Debug */,
+				4016FD061EAFF074003815CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 406CCBFC19EF73E5007C0217 /* Project object */;
+	rootObject = 4016FCEA1EAFF074003815CF /* Project object */;
 }

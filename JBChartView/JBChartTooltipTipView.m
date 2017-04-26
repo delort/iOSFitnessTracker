@@ -7,6 +7,7 @@
 //
 
 #import "JBChartTooltipTipView.h"
+#import "ColorConstants.h"
 
 // Numerics
 CGFloat const kJBChartTooltipTipViewDefaultWidth = 8.0f;

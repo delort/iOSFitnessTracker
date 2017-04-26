@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Jawbone. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface JBChartTooltipTipView : UIView
 

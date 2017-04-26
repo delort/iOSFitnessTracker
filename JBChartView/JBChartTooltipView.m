@@ -7,6 +7,8 @@
 //
 
 #import "JBChartTooltipView.h"
+#import "ColorConstants.h"
+#import "FontConstants.h"
 
 // Drawing
 #import <QuartzCore/QuartzCore.h>

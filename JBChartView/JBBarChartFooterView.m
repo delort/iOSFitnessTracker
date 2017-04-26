@@ -7,6 +7,8 @@
 //
 
 #import "JBBarChartFooterView.h"
+#import "ColorConstants.h"
+#import "FontConstants.h"
 
 // Numerics
 CGFloat const BarChartFooterPolygonViewDefaultPadding = 4.0f;

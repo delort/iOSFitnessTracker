@@ -7,6 +7,7 @@
 //
 
 #import "JBChartHeaderView.h"
+#import "FontConstants.h"
 
 // Numerics
 CGFloat const ChartHeaderViewPadding = 10.0f;

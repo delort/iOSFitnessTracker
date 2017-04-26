@@ -1,16 +1,21 @@
 PODS:
-  - Bolts/Tasks (1.6.0)
-  - MBProgressHUD (0.9.2)
-  - Metawear-iOSAPI (2.3.1):
-    - Bolts/Tasks (~> 1.6)
+  - Bolts/Tasks (1.8.4)
+  - FastCoding+tvOS (3.2.1)
+  - MBProgressHUD (1.0.0)
+  - MetaWear (2.8.3):
+    - Bolts/Tasks (~> 1.8.4)
+    - FastCoding+tvOS (~> 3.2.1)
 
 DEPENDENCIES:
   - MBProgressHUD
-  - Metawear-iOSAPI
+  - MetaWear
 
 SPEC CHECKSUMS:
-  Bolts: f52a250053bb517ca874523c3913776359ab3def
-  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  Metawear-iOSAPI: a2cfabd6965aa49b2e69bfe88fb5e6cad1b74d34
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  FastCoding+tvOS: d314b6daa8389ec790ab362f973f53a5657292bd
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MetaWear: edb17be3e38fd7d262ea433f257a0655c0401f07
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 58e1723fff9b8e434bb91116e92bc55fa0a3bc1b
+
+COCOAPODS: 1.2.1

@@ -7,6 +7,7 @@
 //
 
 #import "JBChartInformationView.h"
+#import "FontConstants.h"
 
 // Numerics
 CGFloat const ChartValueViewPadding = 10.0f;
